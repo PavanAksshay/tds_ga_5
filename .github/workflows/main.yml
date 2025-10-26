@@ -1,0 +1,37 @@
+name: Daily Commit Workflow
+
+on:
+  schedule:
+    # Run daily at 2:30 AM UTC (adjust timezone as needed)
+    - cron: '30 2 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Configure Git
+      run: |
+        git config --local user.email "24f2002734@ds.study.iitm.ac.in"
+        git config --local user.name "GitHub Actions Bot"
+    
+    - name: Create daily commit for 24f2002734@ds.study.iitm.ac.in
+      run: |
+        # Create a simple log file with timestamp
+        echo "Daily commit on $(date)" >> daily-log.txt
+        echo "Workflow triggered at: $(date -u)" >> daily-log.txt
+        echo "Repository: ${{ github.repository }}" >> daily-log.txt
+        echo "Run ID: ${{ github.run_id }}" >> daily-log.txt
+        
+        # Add and commit the changes
+        git add daily-log.txt
+        git commit -m "Daily automated commit - $(date +'%Y-%m-%d %H:%M:%S UTC')" || exit 0
+        
+        # Push the changes
+        git push origin HEAD:${{ github.ref_name }}
