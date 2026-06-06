@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TDC // THE DEVELOPER COMMUNITY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "on-tertiary": "#1b1c1c",
+                        "tertiary": "#e4e2e1",
+                        "primary-fixed": "#5d5f5f",
+                        "on-tertiary-fixed-variant": "#e4e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#c6c6c7",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#5f5e5e",
+                        "background": "#131313",
+                        "on-primary-fixed": "#ffffff",
+                        "outline-variant": "#474747",
+                        "on-secondary-container": "#e2e2e2",
+                        "on-primary-container": "#000000",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary": "#c6c6c6",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "primary-fixed-dim": "#454747",
+                        "on-tertiary-fixed": "#ffffff",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-fixed-dim": "#aaabab",
+                        "secondary-fixed": "#c6c6c6",
+                        "tertiary-fixed-dim": "#474747",
+                        "on-secondary-fixed-variant": "#3a3c3c",
+                        "surface-bright": "#3a3939",
+                        "on-primary": "#1a1c1c",
+                        "on-secondary": "#1a1c1c",
+                        "outline": "#919191",
+                        "tertiary-container": "#929090",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "primary": "#ffffff",
+                        "secondary-container": "#454747",
+                        "on-surface-variant": "#c6c6c6",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#000000",
+                        "primary-container": "#d4d4d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scanline {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink::after { content: '_'; animation: blink 1s step-end infinite; }
+        .terminal-grid { background-image: radial-gradient(#333 0.5px, transparent 0.5px); background-size: 24px 24px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-[#131313] border-b border-[#474747]">
+<div class="text-2xl font-black text-white tracking-tighter font-['Space_Grotesk']">TDC_SYSTEM_V1.0</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#474747] font-['JetBrains_Mono'] uppercase tracking-widest text-[11px] hover:text-white hover:-translate-y-0.5 transition-all duration-200" href="#">MANIFESTO</a>
+<a class="text-white font-bold border-b border-white pb-1 font-['JetBrains_Mono'] uppercase tracking-widest text-[11px] hover:text-white hover:-translate-y-0.5 transition-all duration-200" href="#">TERMINAL</a>
+<a class="text-[#474747] font-['JetBrains_Mono'] uppercase tracking-widest text-[11px] hover:text-white hover:-translate-y-0.5 transition-all duration-200" href="#">MODULES</a>
+<a class="text-[#474747] font-['JetBrains_Mono'] uppercase tracking-widest text-[11px] hover:text-white hover:-translate-y-0.5 transition-all duration-200" href="#">COMMUNITY</a>
+</div>
+<button class="font-['JetBrains_Mono'] uppercase text-[10px] tracking-widest px-4 py-2 border border-outline-variant hover:bg-primary hover:text-surface transition-all active:scale-[0.99]">LOGIN_PROMPT</button>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-8 border-b border-outline-variant terminal-grid">
+<div class="scanline absolute inset-0"></div>
+<div class="max-w-6xl relative z-10">
+<p class="font-label text-[10px] uppercase tracking-[0.4em] mb-6 text-primary flex items-center gap-2">
+<span class="w-2 h-2 bg-primary animate-pulse"></span> SYSTEM_STATUS: OPERATIONAL // ORIGIN: TDC_MAIN
+                </p>
+<h1 class="font-headline text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 cursor-blink">
+                    We Don't Just Teach You to Code. We Make You Build, Ship, and Matter.
+                </h1>
+<p class="max-w-2xl text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed font-light">
+                    The bridge between tutorial hell and a verified engineering career. Join a high-performance network of developers building production-grade software for the real economy.
+                </p>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-primary text-surface px-8 py-4 font-label uppercase text-sm font-bold tracking-widest hover:bg-transparent hover:text-primary border border-primary transition-all hover:-translate-y-1">
+                        INITIALIZE_MEMBERSHIP
+                    </button>
+<button class="border border-outline-variant px-8 py-4 font-label uppercase text-sm tracking-widest hover:bg-surface-container-low transition-all hover:-translate-y-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span> READ_MANIFESTO
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 right-8 hidden lg:block font-label text-[10px] text-outline text-right">
+<p>LATENCY: 14MS</p>
+<p>NODES: 1,402 ACTIVE</p>
+<p>UPTIME: 99.998%</p>
+</div>
+</section>
+<!-- ABOUT US -->
+<section class="grid grid-cols-1 md:grid-cols-2 border-b border-outline-variant">
+<div class="p-8 md:p-16 border-r border-outline-variant bg-surface-container-lowest">
+<span class="font-label text-[10px] text-outline tracking-widest uppercase mb-4 block">// ABOUT_US</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-8">Tutorial Hell is a Trap.</h2>
+<div class="space-y-6 text-on-surface-variant font-light leading-relaxed text-lg">
+<p>Watching videos is not building. Reading documentation without implementation is just reading. Most platforms keep you in a cycle of passive consumption.</p>
+<p>TDC was built to shatter this cycle. We provide the pressure, the peers, and the production-level requirements that force growth.</p>
+</div>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Code on terminal screen" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" data-alt="Close-up of a high-contrast dark mode code editor with neon syntax highlighting and technical diagnostic overlays in a brutalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkQR1RWZOvNCV0J65DGeqK7Q_zR0aspdiAn-vq6yAeMaJ8eRWvJaRxdiruL54cmC7GrGyVAq4QlgqPYp6JfeRdy6-D7r_i0cBuTsYkVhM5PEtGRdYZaqdD26-9RCk5fYX3Po1MCkqQDHAevRR9k_h_Ttr_vld5O5k4J51Hx2h04PyKZvU9g77E-YC1bGFvGXz433_7hcpLYeoZt_CEjKdSYY9wMCTFLRBw1IM3qEq5-FeYna2qxEKqyUM89f0-LLwXTqLo50hCZ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+</section>
+<!-- OUR MISSION -->
+<section class="p-8 md:p-24 bg-surface text-center border-b border-outline-variant">
+<div class="max-w-4xl mx-auto">
+<span class="font-label text-primary text-[11px] uppercase tracking-[0.3em] mb-8 block">/ MISSION_STATEMENT /</span>
+<h3 class="font-headline text-3xl md:text-6xl font-bold tracking-tighter leading-none mb-12">
+                    Closing the gap between academic theory and the ruthless reality of product shipping.
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-20">
+<div class="p-6 border border-outline-variant hover:-translate-y-2 transition-all duration-300">
+<span class="font-label text-outline text-xs block mb-4">01 // BRUTAL_HONESTY</span>
+<p class="text-sm font-light">We value code that works in production over code that looks good on a resume.</p>
+</div>
+<div class="p-6 border border-outline-variant hover:-translate-y-2 transition-all duration-300">
+<span class="font-label text-outline text-xs block mb-4">02 // COLLECTIVE_LEVERAGE</span>
+<p class="text-sm font-light">One developer is a tool. A community of developers is a powerhouse.</p>
+</div>
+<div class="p-6 border border-outline-variant hover:-translate-y-2 transition-all duration-300">
+<span class="font-label text-outline text-xs block mb-4">03 // PROOF_OF_WORK</span>
+<p class="text-sm font-light">Your certificates are worthless. Your GitHub history and deployed products are everything.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="p-8 md:p-16 border-b border-outline-variant bg-surface-container-low">
+<h2 class="font-headline text-4xl font-bold mb-16 tracking-tighter">THE_PIPELINE</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<div class="relative p-8 border border-outline-variant bg-surface group hover:bg-surface-variant transition-colors">
+<span class="font-label text-6xl text-primary opacity-20 group-hover:opacity-100 transition-opacity mb-4 block">01</span>
+<h4 class="font-label font-bold uppercase mb-4 tracking-widest text-primary">JOIN</h4>
+<p class="text-xs text-on-surface-variant font-light">Pass the technical entry module. We only accept those who can execute.</p>
+</div>
+<div class="relative p-8 border border-outline-variant bg-surface group hover:bg-surface-variant transition-colors">
+<span class="font-label text-6xl text-primary opacity-20 group-hover:opacity-100 transition-opacity mb-4 block">02</span>
+<h4 class="font-label font-bold uppercase mb-4 tracking-widest text-primary">PLACE</h4>
+<p class="text-xs text-on-surface-variant font-light">Get assigned to a high-priority squad based on your stack and latency.</p>
+</div>
+<div class="relative p-8 border border-outline-variant bg-surface group hover:bg-surface-variant transition-colors">
+<span class="font-label text-6xl text-primary opacity-20 group-hover:opacity-100 transition-opacity mb-4 block">03</span>
+<h4 class="font-label font-bold uppercase mb-4 tracking-widest text-primary">BUILD</h4>
+<p class="text-xs text-on-surface-variant font-light">Execute on real-world sprints with active industry mentors overseeing every PR.</p>
+</div>
+<div class="relative p-8 border border-outline-variant bg-surface group hover:bg-surface-variant transition-colors">
+<span class="font-label text-6xl text-primary opacity-20 group-hover:opacity-100 transition-opacity mb-4 block">04</span>
+<h4 class="font-label font-bold uppercase mb-4 tracking-widest text-primary">PROOF</h4>
+<p class="text-xs text-on-surface-variant font-light">Verified contributions on-chain. Deploy, ship, and earn revenue share.</p>
+</div>
+</div>
+</section>
+<!-- WHO IS THIS FOR -->
+<section class="p-8 md:p-16 border-b border-outline-variant">
+<h2 class="font-headline text-4xl font-bold mb-16 tracking-tighter text-right">TARGET_DEMOGRAPHICS</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border border-outline-variant flex flex-col h-full hover:border-primary transition-all">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">terminal</span>
+<h4 class="font-headline text-2xl font-bold mb-4">FRESHERS</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed">Stop applying for "Junior" roles with blank portfolios. Build the portfolio that makes companies hunt for you.</p>
+</div>
+<ul class="mt-8 font-label text-[10px] text-outline-variant space-y-2 uppercase tracking-widest">
+<li>&gt; ZERO_TO_PRODUCTION</li>
+<li>&gt; SQUAD_DYNAMICS</li>
+<li>&gt; TOOL_CHAIN_MASTERY</li>
+</ul>
+</div>
+<div class="p-8 border border-outline-variant bg-surface-container flex flex-col h-full hover:border-primary transition-all">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">school</span>
+<h4 class="font-headline text-2xl font-bold mb-4">STUDENTS</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed">Complement your theory with actual deployment. Be the only graduate with 2 years of "work" experience.</p>
+</div>
+<ul class="mt-8 font-label text-[10px] text-outline-variant space-y-2 uppercase tracking-widest">
+<li>&gt; ACADEMIC_BRIDGE</li>
+<li>&gt; NETWORK_ACCESS</li>
+<li>&gt; INDUSTRY_MENTORSHIP</li>
+</ul>
+</div>
+<div class="p-8 border border-outline-variant flex flex-col h-full hover:border-primary transition-all">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">settings_suggest</span>
+<h4 class="font-headline text-2xl font-bold mb-4">PROS</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed">Escape the 9-5 grind. Collaborate on high-stakes side projects and fractional ownership models.</p>
+</div>
+<ul class="mt-8 font-label text-[10px] text-outline-variant space-y-2 uppercase tracking-widest">
+<li>&gt; EQUITY_UPSIDE</li>
+<li>&gt; FRACTIONAL_WORK</li>
+<li>&gt; SENIOR_COUNCIL</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- THE TEAM BEHIND TDC -->
+<section class="p-8 md:p-16 border-b border-outline-variant bg-surface-container-lowest">
+<h2 class="font-label text-xs tracking-[0.5em] text-outline uppercase mb-16 text-center">CORE_COMMITTEE_NODES</h2>
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Team Member -->
+<div class="group">
+<div class="aspect-square bg-surface-variant mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all border border-outline-variant">
+<img alt="President" class="w-full h-full object-cover" data-alt="Dramatic black and white portrait of a confident man with technical spectacles, harsh studio lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVNCR3n2bun3FoRaA7XevAMGnl7qYu3uinP7r6CLBnPeajo00mehZAy1hWSIqkGx4TC5Wuatu93A03Bg6sLp_Y_QVySEXYhsyigrpeRKhBhcyXL93u3ixVEg1nmrvK0E5y0SPVdEsarE4zeaIc04Hg9aVmj-PudE9StOidvs7wchf19T7iRUwCzht5DCDDuhxq0qMTnkwCstUISeIi18FSNZcEgsEV9V-ypMnknKnE8ihM4NUdYXr0Uh6Z_7ILd7VkXBtRErSML6I"/>
+</div>
+<p class="font-label text-[10px] text-primary mb-1 tracking-tighter">ID: 001_PRESIDENT</p>
+<h5 class="font-headline font-bold uppercase tracking-tight text-lg">Alex Rivet</h5>
+</div>
+<!-- Team Member -->
+<div class="group">
+<div class="aspect-square bg-surface-variant mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all border border-outline-variant">
+<img alt="COO" class="w-full h-full object-cover" data-alt="Powerful professional portrait of a woman in a dark blazer, minimalist background, stark high-contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEPowAERupXEPpv-kivIe2DfcF_kjr2UTmpkn6_0wedxgWKFqLAR2NY3hesIp0FMFPpLHhFNwdVyImXIndLso_k4tRtmRtkdXMoQtacAJSmX7UUdeOdP25yzSDx1V3N5zCKvYrOSUsDv8nz1ZfEWvXTqr6aD1d_Y0wndokTaQOJ9nG0p8b_Mze0C-aD15rPAIzLfXy9APgua1MweYb9PjSGmvJPZCsnVHTx8D7Aiu0t7xjzh0I3kjE9FRob4_lATzw3LcXeHcaiis"/>
+</div>
+<p class="font-label text-[10px] text-primary mb-1 tracking-tighter">ID: 002_COO</p>
+<h5 class="font-headline font-bold uppercase tracking-tight text-lg">Sarah Chen</h5>
+</div>
+<!-- Team Member -->
+<div class="group">
+<div class="aspect-square bg-surface-variant mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all border border-outline-variant">
+<img alt="CTO" class="w-full h-full object-cover" data-alt="Close up of a focused software engineer with glasses, screen light reflecting on face, dark brutalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtF3cYrD5IN-ok_pILnmAT0Xru-mH31Eg1ASyjfZawMmq9q_cBxngnKt08FctCNUxyIZwI5SMZsSO2Xgj0ZzFiVoxhtQK8DyeZ7rpyIfKs8AUXXnSiKloDtvXUHVyVJlvNvUB-8BnJfqII0CyXXyM8bT4alTsoY-Bh-oKt65OOKm1NNdpvLSzGIf1240q_-_JzTacgaN5l_8KZIemPvkFA6j28ReUIry64Jf-AGhWguLCkrCYACy6s6MOWS4BZyYbzAec-dwAtvyw"/>
+</div>
+<p class="font-label text-[10px] text-primary mb-1 tracking-tighter">ID: 003_CTO</p>
+<h5 class="font-headline font-bold uppercase tracking-tight text-lg">Marcus Vane</h5>
+</div>
+<!-- Team Member -->
+<div class="group">
+<div class="aspect-square bg-surface-variant mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all border border-outline-variant">
+<img alt="CMO" class="w-full h-full object-cover" data-alt="Creative portrait of a woman with modern aesthetic, neutral expression, high-end editorial black and white photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqL8D9BblgZUXe5jn-nLK98jPtzuXJ529IuQvgwfzpj2gL2JBXMWKifmKTawGd58FirCdMt4BWWS0Nn-U6EaufNt2IRk168qpuagKsN_vAZEKy8XdYnkyMK8Pfq6fUcODcZUntf7-5dugPSKVB8HYHuNzecBuHgfrrpHmD9IcjvY4mKS3MC1Agc5QZtbUrbTVBlr-yHo7hzapU-vBMSO2SBgzYluSlUU7EMCKqrf8Ek0noRIDg27LsxEZF-XDFnFPA0upxn-a01NM"/>
+</div>
+<p class="font-label text-[10px] text-primary mb-1 tracking-tighter">ID: 004_CMO</p>
+<h5 class="font-headline font-bold uppercase tracking-tight text-lg">Elena Voss</h5>
+</div>
+<!-- Team Member -->
+<div class="group">
+<div class="aspect-square bg-surface-variant mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all border border-outline-variant">
+<img alt="CSO" class="w-full h-full object-cover" data-alt="Serious man in high-tech setting, sharp focus, monochrome palette, futuristic brutalist office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZtDXZRfXAFE50vh__JwnncnbYAfTmplEH0rFy_XoUrSqE3fUiqHRn8i6TTqgTeAl_pl45uEa_UJj8R0EE6MEAgBke-D6RYo5sJaanI8Kq_M-Gi8JNADsFO4bsoGDTMNSjMv17A5QoEZPbFnXNwDwxmTPvjC2sGGsa15dvYoZzA1Rysm89eI2yf0rrSl-zYQnRtZiOFjvV9i8DgAcFfxxDFfx2fPaP6YUW8nw-e0v1GrWVbaoUeOEZJi78q79ip4B03JK4kJ7h1qc"/>
+</div>
+<p class="font-label text-[10px] text-primary mb-1 tracking-tighter">ID: 005_CSO</p>
+<h5 class="font-headline font-bold uppercase tracking-tight text-lg">David Korm</h5>
+</div>
+</div>
+</section>
+<!-- WHY TDC (Comparison) -->
+<section class="p-8 md:p-16 border-b border-outline-variant">
+<h2 class="font-headline text-4xl font-bold mb-16 tracking-tighter">SYSTEM_DIFFERENTIALS</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse font-label">
+<thead>
+<tr class="text-left border-b border-outline">
+<th class="p-6 text-outline-variant uppercase text-xs">FEATURE_SET</th>
+<th class="p-6 text-outline-variant uppercase text-xs">OTHER_PLATFORMS</th>
+<th class="p-6 text-primary uppercase text-xs font-bold bg-surface-container-low">TDC_CORE</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-outline-variant">
+<td class="p-6 uppercase">Curriculum</td>
+<td class="p-6 text-on-surface-variant">Generic Video Courses</td>
+<td class="p-6 bg-surface-container-low font-bold">Dynamic Shipping Sprints</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-6 uppercase">Validation</td>
+<td class="p-6 text-on-surface-variant">PDF Certificates</td>
+<td class="p-6 bg-surface-container-low font-bold">Deployed URL + On-Chain ID</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-6 uppercase">Community</td>
+<td class="p-6 text-on-surface-variant">Passive Discord Server</td>
+<td class="p-6 bg-surface-container-low font-bold">Squad-Based Command Center</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-6 uppercase">Outcome</td>
+<td class="p-6 text-on-surface-variant">Job "Assistance"</td>
+<td class="p-6 bg-surface-container-low font-bold">Revenue Share + Placement</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- WHAT WE BUILD -->
+<section class="p-8 md:p-16 border-b border-outline-variant bg-surface">
+<h2 class="font-headline text-4xl font-bold mb-16 tracking-tighter">PROJECT_TIERS</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group border border-outline-variant p-8 hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-primary border border-primary px-3 py-1">TIER_01: ALPHA</span>
+<span class="font-label text-outline text-[10px]">STAKE: LOW</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Core Infrastructure Modules</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Building open-source primitives for the community. Focused on clean architecture, testing, and CI/CD pipelines.</p>
+</div>
+<div class="group border border-outline-variant p-8 hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-primary border border-primary px-3 py-1">TIER_02: BETA</span>
+<span class="font-label text-outline text-[10px]">STAKE: MEDIUM</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Functional SaaS Engines</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Developing full-stack applications with user management, payments, and real-time data sync.</p>
+</div>
+<div class="group border border-outline-variant p-8 hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-primary border border-primary px-3 py-1">TIER_03: DELTA</span>
+<span class="font-label text-outline text-[10px]">STAKE: HIGH</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Enterprise Microservices</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Architecting scalable distributed systems for high-load partner companies. Paid engagement level.</p>
+</div>
+<div class="group border-2 border-primary p-8 bg-surface-container-highest hover:-translate-y-2 transition-all">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs bg-primary text-surface px-3 py-1">TIER_MAX: OMEGA</span>
+<span class="font-label text-primary text-[10px]">STAKE: REVENUE</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Sponsored TDC Ventures</h3>
+<p class="text-sm text-white leading-relaxed">Internal startups incubated by TDC. Squads become founders. Revenue is shared among contributors.</p>
+</div>
+</div>
+</section>
+<!-- YOUR PROOF. YOUR SHARE. -->
+<section class="p-8 md:p-24 border-b border-outline-variant text-center">
+<h2 class="font-headline text-4xl md:text-7xl font-black mb-10 tracking-tighter uppercase italic">Your Proof. Your Share.</h2>
+<p class="max-w-2xl mx-auto text-lg text-on-surface-variant font-light mb-12">
+                Every line of code you commit within TDC is logged against your immutable profile. When the projects you build generate value, you don't just get a "thank you"—you get a seat at the table.
+            </p>
+<div class="flex justify-center gap-8 font-label text-[10px] tracking-widest text-outline">
+<span class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> VERIFIED_CONTRIBUTIONS</span>
+<span class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> EQUITY_TRACKING</span>
+<span class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> PAYOUT_MODULES</span>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="p-8 md:p-32 bg-primary text-surface text-center">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-12">Stop waiting for permission to build something real.</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-surface text-primary px-12 py-5 font-label uppercase text-sm font-bold tracking-widest hover:bg-surface-container-highest transition-all">
+                    START_UPGRADE_SEQUENCE
+                </button>
+<button class="border border-surface text-surface px-12 py-5 font-label uppercase text-sm font-bold tracking-widest hover:bg-surface hover:text-primary transition-all">
+                    VIEW_LIVE_TERMINAL
+                </button>
+</div>
+<p class="mt-12 font-label text-[10px] uppercase tracking-[0.4em] opacity-60">NEXT_COHORT_START: 12_DAYS_04_HOURS_22_MINS</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-6 px-8 flex justify-between items-center border-t border-[#474747] bg-[#131313] font-['JetBrains_Mono'] uppercase text-[10px] tracking-[0.1em]">
+<div class="text-[#474747]">©2024 TERMINAL_EDITORIAL_SYSTEM // STATUS: OPERATIONAL</div>
+<div class="flex gap-8">
+<a class="text-[#474747] hover:text-white transition-colors duration-200" href="#">DOCS</a>
+<a class="text-[#474747] hover:text-white transition-colors duration-200" href="#">API_REF</a>
+<a class="text-[#474747] hover:text-white transition-colors duration-200" href="#">GIT_HUB</a>
+<a class="text-[#474747] hover:text-white transition-colors duration-200" href="#">SECURITY_STUB</a>
+</div>
+</footer>
+</body></html>

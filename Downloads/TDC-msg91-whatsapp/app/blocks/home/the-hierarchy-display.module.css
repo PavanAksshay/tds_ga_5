@@ -1,0 +1,240 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-20) var(--space-4) var(--space-24);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  overflow: visible;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .root {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.systemTag {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  color: var(--color-on-surface-subtle);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* ── Flow Container ── */
+
+.flowContainer {
+  position: relative;
+  padding: var(--space-4) 0;
+  margin-top: 0;
+}
+
+.track {
+  position: absolute;
+  top: 48px; /* 16px (half gap) + 32px (half circle) */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.pulse {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-on-surface), transparent);
+  animation: pulseMove 4s linear infinite;
+}
+
+@keyframes pulseMove {
+  0% { left: -100px; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.pipeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align points to top to maintain symmetry */
+  position: relative;
+  z-index: 2;
+  padding: 0 var(--space-8);
+}
+
+/* ── Node ── */
+
+.node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nodePoint {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nodeId {
+  font-family: var(--family-mono);
+  font-size: 20px;
+  color: var(--color-on-surface-subtle);
+  font-weight: 700;
+}
+
+.nodeContent {
+  position: relative;
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 260px;
+  background-color: #050505;
+  border: 1px solid #1a1a1a;
+  padding: var(--space-6) var(--space-4);
+  position: relative;
+}
+
+.nodeContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #333, transparent);
+}
+
+.nodeStage {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.nodeLabel {
+  font-family: var(--family-display);
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  color: var(--color-on-surface);
+  line-height: 1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.nodeShortDesc {
+  font-family: var(--family-mono);
+  font-size: 12px;
+  color: var(--color-on-surface-muted);
+  line-height: 1.6;
+  max-width: 220px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Interaction */
+.node:hover .nodePoint {
+  background-color: var(--color-on-surface);
+  border-color: var(--color-on-surface);
+  box-shadow: 0 0 15px var(--color-on-surface);
+}
+
+.node:hover .nodePoint .nodeId {
+  color: var(--color-surface);
+}
+
+/* ── Mobile Fallback ── */
+
+@media (max-width: 768px) {
+  .root {
+    padding: var(--space-12) 0 var(--space-16);
+  }
+
+  .intro {
+    padding: 0 var(--space-6);
+  }
+
+  .flowContainer {
+    padding: var(--space-8) 0;
+    width: 100%;
+  }
+
+  .track, .pulse {
+    display: none; /* Hide tracks on mobile swipe layout */
+  }
+
+  .pipeline {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: var(--space-4);
+    scroll-padding-left: var(--space-6);
+    padding: var(--space-4) var(--space-6);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pipeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .node {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    scroll-snap-align: start;
+    min-width: 85vw;
+    flex: 0 0 85vw;
+  }
+
+  .nodePoint {
+    margin: 0 auto;
+  }
+
+  .nodeContent {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    flex: 1;
+  }
+
+  .bridgeDetail {
+    display: none; /* Hide complex details on mobile to keep it compact */
+  }
+}

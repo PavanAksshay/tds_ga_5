@@ -1,0 +1,29 @@
+# The Developer Community
+
+> A professional developer community for engineers who want to build real
+> projects, ship to real users, and earn verified proof of work credits.
+
+## What This Site Is
+The Developer Community is a platform that connects developers with real,
+production-level collaborative projects. Unlike toy side projects, every
+project here reaches real users. Every contributor is publicly credited.
+Every credit is resume-ready proof of work.
+
+## Key Stats
+- 1,284 active projects currently in progress
+- 347 upcoming projects queued to launch
+- Contributors earn public credits for every merged contribution
+
+## Pages
+- /projects — Browse all open projects and find teams to join
+- /login — Access your account
+- /register — Create a new account
+- /profile — Your developer profile and portfolio
+
+## Who Is This For
+- Junior and mid-level developers who want verified portfolio work
+- Senior developers who want to lead real teams
+- Developers who want resume-ready proof of production contribution
+
+## Contact
+Email: hello@devcom.io

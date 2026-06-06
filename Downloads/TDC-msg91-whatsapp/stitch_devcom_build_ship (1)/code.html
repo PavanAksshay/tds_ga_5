@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TDC Master Legal Documentation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#2a2a2a",
+                        "outline-variant": "#474747",
+                        "on-tertiary": "#1b1c1c",
+                        "surface-tint": "#c6c6c7",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#e4e2e1",
+                        "surface-bright": "#3a3939",
+                        "primary-container": "#d4d4d4",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#1a1c1c",
+                        "tertiary-fixed": "#5f5e5e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-container": "#454747",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-tertiary-container": "#000000",
+                        "on-secondary-fixed-variant": "#3a3c3c",
+                        "tertiary-fixed-dim": "#474747",
+                        "primary-fixed-dim": "#454747",
+                        "on-primary-container": "#000000",
+                        "surface": "#131313",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "on-primary": "#1a1c1c",
+                        "tertiary": "#e4e2e1",
+                        "on-primary-fixed": "#ffffff",
+                        "inverse-on-surface": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#aaabab",
+                        "secondary-fixed": "#c6c6c6",
+                        "error": "#ffb4ab",
+                        "primary": "#ffffff",
+                        "tertiary-container": "#929090",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#c6c6c6",
+                        "background": "#131313",
+                        "outline": "#919191",
+                        "primary-fixed": "#5d5f5f",
+                        "on-secondary-container": "#e2e2e2",
+                        "secondary": "#c6c6c6",
+                        "surface-container-low": "#1c1b1b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #ffffff; }
+        .blinking-cursor { animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid #474747; }
+        th { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: #c6c6c6; text-transform: uppercase; }
+        td { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; }
+        tr:hover { background-color: #1c1b1b; }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased relative min-h-screen flex flex-col md:flex-row">
+<div class="fixed inset-0 scanline z-50"></div>
+<!-- SideNavBar (Shared Component) -->
+<nav class="hidden md:flex h-screen w-64 border-r border-[#474747] tonal-stacking bg-[#1c1b1b] fixed left-0 top-0 flex flex-col pt-20 z-40">
+<div class="px-6 mb-8">
+<h2 class="text-lg font-bold text-white font-headline">LEGAL_REGISTRY</h2>
+<p class="font-label text-xs tracking-widest text-outline-variant mt-1">VERSION_2.0.4</p>
+</div>
+<ul class="flex flex-col flex-grow">
+<!-- Active state logic: Directly matching TERMS_OF_SERVICE -->
+<li>
+<a class="flex items-center bg-[#353534] text-white border-l-4 border-white pl-4 py-3 font-label text-xs tracking-widest uppercase hover:bg-[#353534] hover:text-white transition-colors duration-100" href="#">
+<span class="material-symbols-outlined mr-3 text-base">gavel</span>
+                    TERMS_OF_SERVICE
+                </a>
+</li>
+<li>
+<a class="flex items-center text-neutral-500 pl-4 py-3 border-l-4 border-transparent font-label text-xs tracking-widest uppercase hover:bg-[#353534] hover:text-white transition-colors duration-100" href="#">
+<span class="material-symbols-outlined mr-3 text-base">lock</span>
+                    PRIVACY_ENCRYPTION
+                </a>
+</li>
+<li>
+<a class="flex items-center text-neutral-500 pl-4 py-3 border-l-4 border-transparent font-label text-xs tracking-widest uppercase hover:bg-[#353534] hover:text-white transition-colors duration-100" href="#">
+<span class="material-symbols-outlined mr-3 text-base">cookie</span>
+                    COOKIE_PROTOCOL
+                </a>
+</li>
+<li>
+<a class="flex items-center text-neutral-500 pl-4 py-3 border-l-4 border-transparent font-label text-xs tracking-widest uppercase hover:bg-[#353534] hover:text-white transition-colors duration-100" href="#">
+<span class="material-symbols-outlined mr-3 text-base">terminal</span>
+                    LICENSE_MIT
+                </a>
+</li>
+<li>
+<a class="flex items-center text-neutral-500 pl-4 py-3 border-l-4 border-transparent font-label text-xs tracking-widest uppercase hover:bg-[#353534] hover:text-white transition-colors duration-100" href="#">
+<span class="material-symbols-outlined mr-3 text-base">verified_user</span>
+                    CONTRIBUTOR_COVENANT
+                </a>
+</li>
+</ul>
+<div class="p-6 border-t border-[#474747]">
+<button class="w-full bg-white text-surface py-3 font-label text-xs tracking-widest uppercase hover:-translate-y-1 hover:bg-surface hover:text-white border border-transparent hover:border-white transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined mr-2 text-sm">download</span>
+                 DOWNLOAD_PDF
+             </button>
+</div>
+</nav>
+<!-- TopNavBar (Shared Component) - Visible on Mobile -->
+<header class="md:hidden flex justify-between items-center w-full px-6 py-4 bg-[#131313] docked full-width top-0 border-b border-[#474747] z-40 fixed">
+<div class="text-2xl font-black text-white tracking-widest font-['JetBrains_Mono']">TDC_</div>
+<div class="flex items-center space-x-4">
+<button class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-white hover:-translate-y-1 transition-transform duration-200">LOGIN_PROMPT</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 pt-24 md:pt-12 px-6 md:px-16 pb-24 z-10 max-w-5xl">
+<!-- Header Section -->
+<header class="mb-16 border-b border-outline-variant pb-8">
+<div class="flex justify-between items-start mb-6">
+<div class="inline-flex items-center px-2 py-1 bg-error text-on-error font-label text-xs font-bold uppercase tracking-widest mb-4">
+<span class="material-symbols-outlined text-[14px] mr-1" style="font-variation-settings: 'FILL' 1;">warning</span>
+                    STRICTLY CONFIDENTIAL
+                </div>
+<div class="font-label text-xs text-outline-variant text-right">
+                    DOC_ID: TDC-MLD-2024<br/>
+                    STATUS: SECURE_ENCLAVE
+                </div>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tight text-white leading-none mb-4 w-full md:w-4/5">
+                THE DEVELOPER COMMUNITY MASTER LEGAL DOCUMENTATION v2.0<span class="blinking-cursor">_</span>
+</h1>
+<p class="font-label text-on-surface-variant max-w-2xl mt-6">&gt; INITIATING DECRYPT SEQUENCE... ACCESS GRANTED.</p>
+</header>
+<!-- Document Index -->
+<section class="mb-20">
+<div class="bg-surface-container-low border border-outline-variant p-1">
+<div class="border-b border-outline-variant p-4 bg-surface-container">
+<h2 class="font-headline text-xl font-bold tracking-tight">DOCUMENT INDEX<span class="blinking-cursor">|</span></h2>
+</div>
+<div class="overflow-x-auto">
+<table>
+<thead>
+<tr>
+<th class="w-1/4">DOCUMENT</th>
+<th>TITLE</th>
+<th class="w-1/6 text-right">STATUS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-secondary">DOCUMENT 1</td>
+<td class="text-white">PLATFORM TERMS OF SERVICE</td>
+<td class="text-right text-outline-variant">ACTIVE</td>
+</tr>
+<tr>
+<td class="text-secondary">DOCUMENT 2</td>
+<td class="text-white">SUPREME AUTHORITY &amp; GOVERNANCE</td>
+<td class="text-right text-outline-variant">ACTIVE</td>
+</tr>
+<tr>
+<td class="text-secondary">DOCUMENT 3</td>
+<td class="text-white">PENALTIES &amp; ENFORCEMENT</td>
+<td class="text-right text-outline-variant">ACTIVE</td>
+</tr>
+<tr>
+<td class="text-secondary">APPENDIX A</td>
+<td class="text-white">DATA RETENTION PROTOCOLS</td>
+<td class="text-right text-outline-variant">ACTIVE</td>
+</tr>
+<tr>
+<td class="text-secondary">APPENDIX B</td>
+<td class="text-white">CONSOLIDATED PENALTY SCHEDULE</td>
+<td class="text-right text-outline-variant">ACTIVE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Document 1 -->
+<section class="mb-24">
+<div class="flex items-center mb-8">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold px-6 tracking-tighter">DOCUMENT 1: PLATFORM TERMS OF SERVICE</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Navigation/Index side -->
+<div class="md:col-span-3">
+<ul class="font-label text-sm text-secondary space-y-4 border-l border-outline-variant pl-4 sticky top-12">
+<li class="text-white font-bold border-l-2 border-white -ml-[17px] pl-4">1. Acceptance</li>
+<li class="hover:text-white transition-colors cursor-pointer">2. Platform Desc.</li>
+<li class="hover:text-white transition-colors cursor-pointer">3. User Conduct</li>
+<li class="hover:text-white transition-colors cursor-pointer">4. Supreme Governance</li>
+</ul>
+</div>
+<!-- Content side -->
+<div class="md:col-span-9 space-y-12">
+<div class="group">
+<h3 class="font-headline text-xl font-bold mb-4 flex items-center">
+<span class="text-outline-variant mr-3 font-label text-sm group-hover:text-white transition-colors">01</span>
+                            Acceptance of Terms
+                        </h3>
+<div class="prose prose-invert prose-p:font-body prose-p:text-on-surface-variant prose-p:leading-relaxed prose-p:mb-4">
+<p>By accessing or using the Platform, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Platform. The Developer Community reserves the right, at its sole discretion, to modify or replace these Terms at any time.</p>
+<p>Continued access following any revision constitutes acceptance of the modified Terms. Ignorance of updates is not a valid defense against enforcement actions.</p>
+</div>
+</div>
+<div class="group">
+<h3 class="font-headline text-xl font-bold mb-4 flex items-center">
+<span class="text-outline-variant mr-3 font-label text-sm group-hover:text-white transition-colors">02</span>
+                            Platform Description
+                        </h3>
+<div class="prose prose-invert prose-p:font-body prose-p:text-on-surface-variant prose-p:leading-relaxed prose-p:mb-4">
+<p>TDC is an elite environment designed for high-performance interaction. It is provided "AS IS" and "AS AVAILABLE" without warranty of any kind. We do not guarantee continuous, uninterrupted, or secure access.</p>
+</div>
+<div class="bg-surface-container-low border border-outline-variant p-4 mt-6">
+<p class="font-label text-xs text-secondary">&gt; SYSTEM_NOTE: Expect breaking changes during nightly builds.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Document 2 -->
+<section class="mb-24">
+<div class="flex items-center mb-8">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold px-6 tracking-tighter">DOCUMENT 2: SUPREME AUTHORITY</h2>
+</div>
+<div class="bg-surface-container border border-outline-variant p-6 mb-8">
+<h3 class="font-headline text-xl font-bold mb-6 tracking-tight">Decision-Making Hierarchy</h3>
+<div class="overflow-x-auto border border-outline-variant">
+<table>
+<thead>
+<tr>
+<th class="w-1/6">TIER</th>
+<th class="w-1/3">DESIGNATION</th>
+<th>AUTHORITY LEVEL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-white font-bold">1</td>
+<td class="text-error">SUPREME COUNCIL</td>
+<td>Absolute veto. Override capabilities on all platform functions.</td>
+</tr>
+<tr>
+<td class="text-white">2</td>
+<td>CORE MAINTAINERS</td>
+<td>Architectural decisions. Global moderation rights.</td>
+</tr>
+<tr>
+<td class="text-white">3</td>
+<td>MODERATORS</td>
+<td>Enforcement of Document 3 protocols. Ban authority.</td>
+</tr>
+<tr>
+<td class="text-white">4</td>
+<td class="text-secondary">VERIFIED CONTRIBUTORS</td>
+<td>Community voting rights. Repo merge privileges.</td>
+</tr>
+<tr>
+<td class="text-outline-variant">5</td>
+<td class="text-outline-variant">STANDARD USER</td>
+<td class="text-outline-variant">Read/Write access within designated channels.</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="text-outline-variant italic">OBS</td>
+<td class="text-outline-variant italic">OBSERVER</td>
+<td class="text-outline-variant italic">Read-only. Unauthenticated.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Document 3 -->
+<section class="mb-24">
+<div class="flex items-center mb-8">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold px-6 tracking-tighter">DOCUMENT 3: PENALTIES</h2>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">Enforcement actions are swift and final. Appeals are processed exclusively through cryptographic petition. Review the classification of unauthorized actions carefully.</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Class I & II -->
+<div class="border border-outline-variant bg-surface p-6 hover:-translate-y-1 transition-transform duration-200">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-label text-lg font-bold text-white">CLASS I &amp; II</h4>
+<span class="px-2 py-1 bg-surface-container-high border border-outline-variant text-xs font-label">MINOR</span>
+</div>
+<ul class="space-y-4 font-body text-sm text-secondary">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant text-base mr-2 mt-0.5">chevron_right</span>
+                            Spamming non-technical channels.
+                        </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant text-base mr-2 mt-0.5">chevron_right</span>
+                            Failure to use appropriate markdown formatting.
+                        </li>
+</ul>
+<div class="mt-6 pt-4 border-t border-outline-variant border-dashed">
+<span class="font-label text-xs text-white">PENALTY:</span>
+<span class="font-label text-xs text-error ml-2">TEMP_MUTE (12-48H)</span>
+</div>
+</div>
+<!-- Class III & IV -->
+<div class="border border-error bg-[#1a0a0a] p-6 hover:-translate-y-1 transition-transform duration-200 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-error opacity-10 flex items-center justify-center translate-x-1/2 -translate-y-1/2 rounded-full blur-xl"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<h4 class="font-label text-lg font-bold text-error">CLASS III &amp; IV</h4>
+<span class="px-2 py-1 bg-error text-on-error text-xs font-label font-bold">SEVERE</span>
+</div>
+<ul class="space-y-4 font-body text-sm text-secondary relative z-10">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-error text-base mr-2 mt-0.5">chevron_right</span>
+                            Unauthorized deployment to production branches.
+                        </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-error text-base mr-2 mt-0.5">chevron_right</span>
+                            Circumvention of Tier 1 architecture.
+                        </li>
+</ul>
+<div class="mt-6 pt-4 border-t border-error border-dashed relative z-10">
+<span class="font-label text-xs text-white">PENALTY:</span>
+<span class="font-label text-xs text-error font-bold ml-2">PERM_BAN &amp; IP_BLACKLIST</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Footer -->
+<div class="border-t border-outline-variant pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-label text-xs text-secondary">
+                LAST_MODIFIED: 2024-05-12T14:32:00Z<br/>
+                CHECKSUM: 8f9a2b4c6d...
+            </div>
+<button class="bg-white text-surface px-8 py-3 font-label text-sm font-bold tracking-widest hover:-translate-y-1 hover:bg-surface hover:text-white border border-transparent hover:border-white transition-all duration-200">
+                ACKNOWLEDGE_AND_PROCEED
+            </button>
+</div>
+</main>
+</body></html>

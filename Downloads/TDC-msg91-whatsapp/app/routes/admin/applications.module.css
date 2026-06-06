@@ -1,0 +1,292 @@
+/* admin/applications.module.css — Card grid layout matching career-applications */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.pageHeader {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+}
+
+.pageTitle {
+  font-family: var(--family-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.pageDesc {
+  font-family: var(--family-mono);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-muted);
+  margin: var(--space-2) 0 0;
+}
+
+/* ── Filters ─────────────────────────────────────────────────────────────── */
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.filterGroupLabel {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-on-surface-subtle);
+  letter-spacing: 0.1em;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.filterRow {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border: 1px solid var(--color-border);
+  background: none;
+  color: var(--color-on-surface-muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.filterBtn:hover { border-color: var(--color-on-surface); color: var(--color-on-surface); }
+.filterBtnActive { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-container-lowest);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-container-low);
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-2);
+}
+
+.cardHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow: hidden;
+}
+
+.projectTag {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.06em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+
+.roleTag {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-on-surface-muted);
+  border: 1px solid var(--color-border);
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+
+.statusBadge {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 1px 6px;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status_PENDING     { color: var(--color-on-surface-muted); border-color: var(--color-border); }
+.status_UNDER_REVIEW { color: #f59e0b; border-color: #f59e0b; }
+.status_ACCEPTED    { color: #22c55e; border-color: #22c55e; }
+.status_REJECTED    { color: #ef4444; border-color: #ef4444; }
+
+.cardBody {
+  padding: var(--space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.applicantInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.applicantName {
+  font-family: var(--family-mono);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: 0.04em;
+  margin: 0;
+  word-break: break-word;
+}
+
+.applicantEmail {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: var(--color-on-surface-muted);
+  margin: 0;
+  word-break: break-all;
+}
+
+.applicantDate {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-subtle);
+  margin: var(--space-1) 0 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.link {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-on-surface-muted);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  padding: 1px 8px;
+  transition: border-color 0.12s, color 0.12s;
+}
+.link:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ── Card Actions ────────────────────────────────────────────────────────── */
+.cardActions {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.statusRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.metaLabel {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-on-surface-muted);
+}
+
+.statusBtns {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.statusBtn {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border: 1px solid var(--color-border);
+  background: none;
+  color: var(--color-on-surface-muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.statusBtn:hover { border-color: var(--color-on-surface); color: var(--color-on-surface); }
+.statusBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.statusBtn[data-status="PENDING"].statusBtnActive     { color: var(--color-on-surface-muted); border-color: var(--color-on-surface-muted); }
+.statusBtn[data-status="UNDER_REVIEW"].statusBtnActive { color: #f59e0b; border-color: #f59e0b; }
+.statusBtn[data-status="ACCEPTED"].statusBtnActive    { color: #22c55e; border-color: #22c55e; }
+.statusBtn[data-status="REJECTED"].statusBtnActive    { color: #ef4444; border-color: #ef4444; }
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-border);
+  padding: 5px 12px;
+  background: none;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  flex: 1;
+}
+.actionBtn:hover { background: var(--color-surface-container); border-color: var(--color-on-surface); }
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 5px 12px;
+  font-family: var(--family-mono);
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  height: min-content;
+}
+.deleteBtn:hover:not(:disabled) { background: #ef4444; color: white; border-color: #ef4444; }
+.deleteBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+.emptyState { padding: var(--space-8) 0; text-align: center; }
+.emptyTitle { font-family: var(--family-mono); font-size: var(--text-lg); font-weight: 700; color: var(--color-on-surface-muted); margin: 0 0 var(--space-2); }
+.emptyDesc  { font-family: var(--family-mono); font-size: var(--text-sm); color: var(--color-on-surface-muted); margin: 0; }

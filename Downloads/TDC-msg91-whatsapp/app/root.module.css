@@ -1,0 +1,97 @@
+/* Skip to main content link — accessibility (visually hidden until focused) */
+.skipLink {
+  position: absolute;
+  top: -999px;
+  left: 8px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  font-family: var(--family-mono);
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: top 0.1s;
+}
+.skipLink:focus {
+  top: 8px;
+}
+
+.body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--family-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.pageContainer {
+  opacity: 1;
+  transition: opacity 0.15s ease;
+  will-change: opacity;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.navigating {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.immersive {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: var(--color-surface);
+  overflow-y: auto;
+}
+
+/* Global Navigation Progress Bar */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.progressBarInner {
+  height: 100%;
+  background: var(--color-primary);
+  width: 100%;
+  transform-origin: left;
+  animation: progress 20s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+@keyframes progress {
+  0% { transform: scaleX(0); }
+  5% { transform: scaleX(0.3); }
+  10% { transform: scaleX(0.5); }
+  30% { transform: scaleX(0.7); }
+  50% { transform: scaleX(0.85); }
+  100% { transform: scaleX(0.99); }
+}
+

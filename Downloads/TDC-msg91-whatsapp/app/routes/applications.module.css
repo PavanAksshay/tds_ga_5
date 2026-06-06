@@ -1,0 +1,402 @@
+/* ─── Root ─────────────────────────────────────────────── */
+.root {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--color-on-surface-muted);
+  font-size: var(--text-sm);
+  max-width: 560px;
+}
+
+/* ─── Tabs ──────────────────────────────────────────────── */
+.tabBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  background: var(--color-surface-container);
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+}
+
+.tabBtn {
+  background: transparent;
+  color: var(--color-on-surface-muted);
+  border: none;
+  font-family: var(--family-mono);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-transform: uppercase;
+}
+
+.tabBtn:hover {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.tabBtnActive {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+}
+
+.tabBtnActive:hover {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+}
+
+.tabCount {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  padding: 1px 6px;
+  font-size: 9px;
+  font-weight: 700;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.tabBtnActive .tabCount {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ─── Grid ──────────────────────────────────────────────── */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ─── Card ──────────────────────────────────────────────── */
+.card {
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--color-border-interactive);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-5) var(--space-6);
+  gap: var(--space-4);
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.roleTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.listingId {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  color: var(--color-on-surface-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 340px;
+}
+
+.dateStr {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  color: var(--color-on-surface-subtle);
+  letter-spacing: 0.08em;
+  margin-top: var(--space-1);
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* ─── Status badge ──────────────────────────────────────── */
+.statusBadge {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.status_PENDING {
+  background: rgba(255, 170, 0, 0.08);
+  color: #ffaa00;
+  border-color: rgba(255, 170, 0, 0.25);
+}
+
+.status_UNDER_REVIEW {
+  background: rgba(0, 170, 255, 0.08);
+  color: #00aaff;
+  border-color: rgba(0, 170, 255, 0.25);
+}
+
+.status_ACCEPTED {
+  background: rgba(0, 255, 136, 0.08);
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.25);
+}
+
+.status_REJECTED {
+  background: rgba(255, 68, 68, 0.08);
+  color: #ff4444;
+  border-color: rgba(255, 68, 68, 0.25);
+}
+
+/* ─── View link ─────────────────────────────────────────── */
+.viewLink {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-on-surface-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.viewLink:hover {
+  opacity: 1;
+  color: var(--color-on-surface);
+}
+
+/* ─── Expand button ─────────────────────────────────────── */
+.expandBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-on-surface-muted);
+  font-family: var(--family-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--space-3) var(--space-6);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.expandBtn:hover {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+/* ─── Answers panel ─────────────────────────────────────── */
+.answersPanel {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--color-surface-container-lowest);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.linksRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.appLink {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-on-surface-muted);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  transition: all 0.15s;
+}
+
+.appLink:hover {
+  border-color: var(--color-border-interactive);
+  color: var(--color-on-surface);
+}
+
+.answerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.answerLabel {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-on-surface-muted);
+}
+
+.answerValue {
+  font-family: var(--family-body);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface);
+  line-height: 1.6;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-container);
+  border-left: 2px solid var(--color-border);
+}
+
+/* ─── Empty state ───────────────────────────────────────── */
+.emptyState {
+  padding: var(--space-16) var(--space-6);
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.emptyIcon {
+  color: var(--color-on-surface-subtle);
+}
+
+.emptyTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.emptyText {
+  color: var(--color-on-surface-muted);
+  font-size: var(--text-sm);
+  max-width: 280px;
+}
+
+.exploreBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-top: var(--space-2);
+  transition: opacity 0.2s;
+}
+
+.exploreBtn:hover {
+  opacity: 0.85;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .root {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+  }
+
+  .cardTop {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .cardLeft {
+    gap: var(--space-1);
+  }
+
+  .roleTitle {
+    font-size: var(--text-base);
+  }
+
+  .listingId {
+    max-width: 180px;
+  }
+
+  .cardRight {
+    align-items: flex-end;
+  }
+
+  .answersPanel {
+    padding: var(--space-4);
+  }
+
+  .tabBar {
+    gap: var(--space-1);
+  }
+
+  .tabBtn {
+    font-size: 9px;
+    padding: var(--space-3) var(--space-2);
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}

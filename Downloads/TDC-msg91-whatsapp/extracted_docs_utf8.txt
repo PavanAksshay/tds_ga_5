@@ -1,0 +1,1243 @@
+\n========== d:\TDC-3\AIML_Interview_QuestionBank.docx ==========\nTHE DEVELOPER COMMUNITY
+INTERVIEW QUESTION BANK
+AI / MACHINE LEARNING
+Building Intelligence That Understands, Learns, and Decides
+PROJECT OVERVIEW
+This project focuses on designing, training, and deploying AI/ML models that solve real-world problems — from data ingestion and feature engineering to model evaluation and production serving. Interns work across the full ML pipeline in domain-specific sub-teams (ML Engineering, Data, and Backend Integration) under Tech Leads and a Project Lead. The goal is not just to build a model — but to ship something that works in context, scales, and can be explained to anyone.
+FORMAT GUIDE FOR AI AGENT
+Each question block is tagged with a [FIELD_TYPE] label. The AI agent must render the field type exactly as indicated:
+[SHORT TEXT]  Single-line text input
+[LONG TEXT]  Multi-line text area (up to 300 words)
+[RADIO]  Single-select radio buttons — one option only
+[DROPDOWN]  Dropdown menu — single selection
+[MULTI-CHOICE]  Checkboxes — select all applicable options
+ROLE 1 — PROJECT LEAD
+The Project Lead is the primary technical bridge between the TDC core committee and the AI/ML team. This person translates high-level objectives into sprint-ready tasks, owns every deliverable from data ingestion to model deployment, and shields the team from scope creep. They must articulate complex ML outcomes — accuracy metrics, training curves, inference latency — in plain language to non-technical stakeholders. Strategic thinking, cross-functional communication, and the ability to make confident decisions under ambiguity define this role.
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex AI/ML project you have contributed to. What was the problem, the data, the model choice, and the outcome?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  How familiar are you with the end-to-end ML pipeline — from raw data collection to model deployment? Rate and explain your experience.
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Beginner — I understand the concept but have not built a pipeline
+  ○  Intermediate — I have built parts of a pipeline (data prep or model training)
+  ○  Advanced — I have shipped a model end-to-end, including deployment
+  ○  Expert — I have done this in production with monitoring and retraining
+Q3.  Which of the following have you worked with hands-on? Select all that apply.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Supervised learning (classification, regression)
+  ☐  Unsupervised learning (clustering, dimensionality reduction)
+  ☐  Deep learning / neural networks (CNNs, RNNs, Transformers)
+  ☐  Natural Language Processing (NLP / LLMs)
+  ☐  Computer Vision (object detection, segmentation)
+  ☐  MLOps / model serving (Docker, FastAPI, HuggingFace Spaces, etc.)
+  ☐  Data engineering (pipelines, feature stores, ETL)
+Q4.  You led or co-led a technical initiative. Describe a moment where your initial approach was wrong. What did you do next, and what did the experience teach you?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q5.  How do you explain concepts like model overfitting, precision-recall tradeoff, or dataset bias to someone who has never studied ML?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. LEADERSHIP & COMMUNICATION
+Q6.  You receive sharply critical feedback from the core committee on work your team spent three weeks building. What is your immediate internal response, and how do you manage the next 24 hours?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q7.  How would you structure a fortnightly progress update for the core committee so they stay informed without being overwhelmed by technical detail?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  The model accuracy is at 62% and the demo is tomorrow. The core committee is expecting a full presentation. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Demo it with full transparency — explain the 62% in practical terms and what it means
+  ○  Ask for a deadline extension and explain the risk of presenting an underperforming model
+  ○  Demo only the components working well and flag the accuracy issue separately
+  ○  Consult the team first, then decide based on collective input
+Q9.  A core committee member asks you a deeply technical question about gradient descent that you cannot confidently answer in the moment. How do you respond?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  What does it mean to you for this project to be genuinely successful — not just completed?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. TEAM DYNAMICS & PEOPLE
+Q11.  Your ML Tech Lead and Backend Tech Lead are building components that are fundamentally incompatible — different data formats, different API contracts. Both are convinced the other should adapt. How do you resolve this?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q12.  You notice interns are exclusively doing data labeling with no exposure to model design or evaluation. Do you change this? How?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Yes — I restructure tasks so interns rotate into meaningful technical work
+  ○  Yes — but gradually, only if it does not slow down the sprint
+  ○  No — labeling is essential work and they need to learn patience
+  ○  I discuss it with the team first before making any changes
+Q13.  It is mid-semester. Two Tech Leads have exams and estimate zero output for the next week. The core committee deadline does not move. What is your plan?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  A team member is consistently underdelivering despite private conversations about it. What is your process from this point?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  How do you keep a volunteer ML team psychologically engaged when training runs fail, data is noisy, and results are not coming?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & JUDGMENT
+Q16.  If you could define one north-star metric that tells you whether this AI/ML project succeeded — what would it be and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  You discover that a key dataset the team has been training on for four weeks has a labeling error affecting 30% of the samples. The deadline is in two weeks. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Stop everything, fix the dataset, and renegotiate the deadline
+  ○  Assess the impact — if the model still generalizes, continue and document the issue
+  ○  Split the team: some fix the data, some continue training on clean subsets
+  ○  Escalate immediately to the core committee before making any decision
+Q18.  What is your honest assessment of where AI/ML is overhyped right now, and how does that affect how you would present this project's results?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  Describe your personal working style. How do you manage your own time, track your own deliverables, and ensure you do not become the team's bottleneck?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  Do you have any questions for us about the project scope, the core committee's expectations, or how this team will be evaluated?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 2 — PRODUCT MANAGER
+The Product Manager for the AI/ML project owns the uniqueness and usability of what the team builds. They are not just a deadline tracker — they are the person who asks 'but does this actually solve the problem?' They keep the team in sync, translate data-science outputs into product decisions, and ensure every sprint moves the project closer to something users or stakeholders would genuinely find valuable. This is a management and strategy role adapted for college students — curiosity and system thinking matter as much as prior experience.
+A. BACKGROUND & EXPERIENCE
+Q1.  Have you ever managed a timeline, a group project, or an event where multiple people had different responsibilities? Walk us through how you kept it on track.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Describe an AI/ML tool or product you have used regularly (e.g., a recommendation engine, a chatbot, a classifier). If you were its Product Manager, what is one thing you would improve and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  Have you ever been part of a project that failed or went off-track? What was your role in it, and what would you do differently?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE, APTITUDE & PRODUCT SENSE
+Q4.  How do you prioritize tasks when everything on the team's board feels equally urgent?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  I go to the Project Lead and ask them to decide
+  ○  I assess impact vs. effort and push the highest-impact items forward
+  ○  I check what the core committee cares about most and align to that
+  ○  I poll the Tech Leads on what they can unblock the fastest
+Q5.  A Tech Lead tells you a feature is 'technically impossible' to build by the deadline. A core committee member is expecting it. How do you handle both conversations?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  What tools or methods have you used to track project progress? Select all that apply.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Notion / Confluence for documentation
+  ☐  Trello / Jira / Asana for task management
+  ☐  Google Sheets or Excel trackers
+  ☐  GitHub Projects or similar dev boards
+  ☐  Weekly standup meetings
+  ☐  None yet — but I am ready to learn
+Q7.  What is the biggest difference between a Product Manager who is effective and one who is just organizing meetings?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & MANAGEMENT
+Q8.  Scenario: It is mid-semester. Half the team has major exams and progress has stalled. The core committee deadline is unchanged. What is your action plan, step by step?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Scenario: The ML Tech Lead and the Backend Tech Lead both insist the other is responsible for integrating the model API. Neither is moving. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Escalate to the Project Lead immediately
+  ○  Organize a meeting between both, define the integration contract, and assign ownership clearly
+  ○  Pick one team to own it and document the decision
+  ○  Ask the core committee to clarify whose responsibility it is
+Q10.  Scenario: The Project Lead has communicated a feature to the core committee that your team does not have the capacity to build. How do you handle this?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  Scenario: A Tech Lead submits work on Friday that breaks a previously working part of the system. The demo is Monday. How do you manage this weekend crisis?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Immediately call an emergency team meeting
+  ○  Assess severity with the Tech Lead privately, then decide if an all-hands response is needed
+  ○  Roll back the change and flag it for Monday review
+  ○  Inform the Project Lead and let them manage it
+Q12.  How would you measure whether the AI/ML team is actually productive — beyond just seeing tickets move?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & FIT
+Q13.  If you could give this AI/ML project one competitive advantage that would make it genuinely different from similar college projects — what would it be?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you personally stay updated on trends in AI/ML without getting lost in the hype?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Tell us something about yourself — an interest, a project, a perspective — that will not be found on your resume but that you think makes you a stronger candidate for this role.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q16.  How do you define 'done' for an AI/ML feature? What conditions must be true before you mark something complete?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  Describe a time someone criticized your organizational style or the way you managed a project. How did you respond and what changed?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is one thing most Product Managers overlook when working on AI/ML products specifically — and how would you not make that mistake?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If the team is three weeks in and morale is low because no model is working yet — what do you do to hold the team together?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Organize a team retrospective to surface what is blocking progress
+  ○  Shift focus to smaller wins — celebrate any partial progress to rebuild momentum
+  ○  Go to the Project Lead and discuss whether the team needs restructuring
+  ○  Give the team space — pressure does not help creativity
+Q20.  Do you have any questions for us about the project scope, the team structure, or what success looks like for this role?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 3 — TECH LEADS (ML ENGINEERING, DATA & BACKEND INTEGRATION)
+Tech Leads are the technical backbone of the AI/ML project. Each lead owns one domain — ML Engineering, Data Engineering, or Backend Integration — and is responsible for architecture decisions, code quality, intern mentorship, and delivery within their track. They collaborate closely with the Project Lead and Product Manager, and are expected to think both as an engineer and as a team builder. These are college students stepping into leadership for the first time — technical depth and willingness to teach matter equally.
+DOMAIN SELECTION
+Q0.  Which Tech Lead domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  ML Engineering (model training, evaluation, experimentation)
+  ○  Data Engineering (data collection, cleaning, pipelines, feature engineering)
+  ○  Backend Integration (API development, model serving, backend infrastructure)
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex technical project you have built. What was the architecture, what was your specific role, and what would you do differently now?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Have you ever mentored or taught coding or a technical concept to a junior peer? Describe your approach and what you learned about teaching.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  If an intern keeps making the same technical mistake after you have explained it twice — what is your next step?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Show them the fix myself and move on — we are on a deadline
+  ○  Try a different explanation method — maybe the issue is how I taught it
+  ○  Pair-program with them until they understand the root cause
+  ○  Escalate to the Project Lead for additional guidance
+Q4.  Tell us about a time you had to learn a new technology or framework quickly for a project. How did you approach it and what was the outcome?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. LEADERSHIP & TEAM MANAGEMENT
+Q5.  As Tech Lead, how do you balance writing code yourself versus ensuring your interns are building and learning?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  You disagree with a technical decision made by another Tech Lead on an adjacent team. How do you handle this?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Raise it directly with the other Tech Lead in a one-on-one
+  ○  Bring it to the Project Lead to resolve
+  ○  Document my concern and voice it in the next team standup
+  ○  Accept it — it is their domain and not my call
+Q7.  Your intern has been stuck on a bug for two days but has not asked for help. How do you address this without discouraging them?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  The Product Manager sets a deadline that you know requires cutting corners on code quality. Do you comply or push back? What is your reasoning?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q9.  A critical error is discovered in your team's component right before a demo to the core committee. Walk us through your step-by-step response.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  You are asked to write documentation for a complex module you built. What does a 'good' documentation look like to you, and how do you approach writing it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  What is your approach to code reviews? What do you always look for, and what do you consider out of scope?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q12.  When choosing a tech stack or tooling decision for your domain, what factors do you weigh?
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Team familiarity with the tool
+  ☐  Community support and documentation quality
+  ☐  Performance requirements of the project
+  ☐  Long-term maintainability
+  ☐  Cost / open-source availability
+  ☐  How quickly interns can get up to speed
+D. DOMAIN-SPECIFIC TECHNICAL QUESTIONS
+ML Engineering Track
+Q13.  Explain the difference between overfitting and underfitting. How would you diagnose and address each in a model you are training?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  Walk us through how you would structure an experiment to compare two different model architectures fairly.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  What is the difference between precision and recall, and when would you prioritize one over the other?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Data Engineering Track
+Q16.  Walk us through how you would design a data pipeline for a project that ingests raw web-scraped text and prepares it for NLP model training.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  How do you detect and handle missing or corrupt data in a dataset? What are the tradeoffs of different approaches?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is feature engineering? Give an example of a feature transformation that meaningfully improved a model's performance.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Backend Integration Track
+Q19.  Explain how you would expose an ML model as a REST API endpoint. What are the components involved and what would you monitor in production?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  What is the difference between batch inference and real-time inference? When would you use each, and what infrastructure does each require?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 4 — INTERNS (ML ENGINEERING, DATA & BACKEND INTEGRATION)
+Interns are the engine of the AI/ML project. They bring fresh energy, a hunger to learn, and a willingness to do the work that turns ideas into results. No prior industry experience is expected — what matters is curiosity, coachability, and the ability to work as part of a team. Interns will be embedded within one of the domain sub-teams and will learn directly from their Tech Lead while contributing to real deliverables.
+DOMAIN SELECTION
+Q0.  Which intern domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  ML Engineering (model training, evaluation, experimentation)
+  ○  Data Engineering (data collection, cleaning, pipelines, feature engineering)
+  ○  Backend Integration (API development, model serving, backend infrastructure)
+A. BACKGROUND & EXPERIENCE
+Q1.  Tell us about a coding project, assignment, or personal experiment you are most proud of — no matter how small. What did you build, and what did you learn?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  What programming languages or tools are you most comfortable with right now? Be specific and honest.
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+Q3.  Have you done anything independently to explore AI/ML — online courses, tutorials, personal datasets, Kaggle competitions? Tell us about it.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q4.  Have you ever worked on a group project where the collaboration broke down? How did you handle it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE & APTITUDE
+Q5.  Why do you want to join this AI/ML project specifically — rather than doing your own side projects or taking another course?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  If you are given a task involving a tool or language you have never used before, what are your first three steps?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Google the official documentation and start experimenting
+  ○  Ask my Tech Lead immediately for a tutorial
+  ○  Look for a YouTube walkthrough and replicate it first
+  ○  Try to find a similar project on GitHub and adapt from there
+Q7.  How do you react when you receive critical feedback on your code or work — especially in front of teammates?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  Describe a time you had to learn something difficult in a short amount of time — inside or outside of tech. What was your strategy?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Are you more comfortable working independently on a focused task or collaborating closely with teammates on shared problems?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  I strongly prefer working independently
+  ○  I lean independent but check in regularly
+  ○  I lean collaborative — I think better with others
+  ○  I strongly prefer close collaboration
+Q10.  What is a hobby, interest, or activity outside of coding and academics that you think says something interesting about who you are?
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q11.  Scenario: You have been assigned a task and the Tech Lead's instructions are unclear. They are currently in a meeting. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Wait until the Tech Lead is available and do nothing in the meantime
+  ○  Make a reasonable attempt based on your best interpretation, and document your assumptions
+  ○  Send a message so they can respond when free, and start something adjacent
+  ○  Ask another intern if they understand the task
+Q12.  Scenario: You have been stuck on a bug for six hours and feel too embarrassed to ask for help. What do you do — and what does this situation tell you about yourself?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q13.  Scenario: It is the day before a deadline and you realize your code has a logic error that breaks the build. What is your immediate response?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Fix it quietly and say nothing if it gets resolved
+  ○  Notify the Tech Lead immediately, explain the error, and give an honest estimate of fix time
+  ○  Work through the night to fix it and inform the team only after it is fixed
+  ○  Ask another intern to review and help debug
+Q14.  Tell us about a mistake you made in a project or assignment. How did you fix it and what did you take away from it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  If the Product Manager gives you a task, but your Tech Lead tells you to do something else — whose direction do you follow, and what do you do about the conflict?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. FOUNDATIONAL TECHNICAL KNOWLEDGE
+Q16.  What is Git, and why do teams use version control? Have you used basic Git commands — pull, commit, push, branch?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Yes — I use Git regularly and understand branching and merging
+  ○  I have used basic commands (commit, push) but not branching
+  ○  I have heard of Git but not used it in a real project
+  ○  I am new to Git entirely
+Q17.  In your own words, explain what a machine learning model actually does. Pretend you are explaining it to a friend who has never studied computer science.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is the difference between supervised and unsupervised learning? Give a simple real-world example of each.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If a model performs perfectly on training data but poorly on new data — what is happening, and what is it called?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  The model is overfit — it memorized training data instead of learning patterns
+  ○  The model is underfit — it did not train long enough
+  ○  The data distribution is wrong — a data problem, not a model problem
+  ○  The learning rate is too high — a hyperparameter issue
+Q20.  Do you have any questions for us about what you will be learning, how interns are supported, or what a typical week looks like on this project?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+— END OF AI/ML INTERVIEW QUESTION BANK —\n========== d:\TDC-3\AppDev_Interview_QuestionBank.docx ==========\nTHE DEVELOPER COMMUNITY
+INTERVIEW QUESTION BANK
+APPLICATION DEVELOPMENT
+Engineering Products That People Actually Use
+PROJECT OVERVIEW
+This project focuses on building a full-stack application from requirements to deployment — covering frontend design, backend services, API development, database architecture, and DevOps. Interns work in specialised sub-teams (Frontend, Backend, DevOps, and QA) under the guidance of Tech Leads and a Project Lead. The goal is not just to ship code, but to build a product that is reliable, maintainable, and solves a real problem for its users.
+FORMAT GUIDE FOR AI AGENT
+Each question block is tagged with a [FIELD_TYPE] label. The AI agent must render the field type exactly as indicated:
+[SHORT TEXT]  Single-line text input
+[LONG TEXT]  Multi-line text area (up to 300 words)
+[RADIO]  Single-select radio buttons — one option only
+[DROPDOWN]  Dropdown menu — single selection
+[MULTI-CHOICE]  Checkboxes — select all applicable options
+ROLE 1 — PROJECT LEAD
+The Project Lead is the technical anchor between the TDC core committee and the App Dev team. They own the architecture, the roadmap, and the release — translating product goals into executable engineering tasks for Tech Leads, and translating engineering progress back to stakeholders in plain language. They must understand the full stack — frontend, backend, APIs, databases, DevOps — to make credible decisions and protect the team from unrealistic demands. Judgment under pressure, composure under ambiguity, and the ability to earn trust from both directions are the defining traits of this role.
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex full-stack or app development project you have built or contributed to. What was the architecture, what was your specific role, and what would you do differently now?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  How familiar are you with full-stack architecture? Select all layers you are confident in.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Frontend (React, Vue, or mobile — React Native / Flutter)
+  ☐  Backend (Node.js, Django, FastAPI, Spring Boot, etc.)
+  ☐  Databases (SQL and/or NoSQL — schema design, queries)
+  ☐  REST or GraphQL API design and documentation
+  ☐  DevOps basics (CI/CD, Docker, deployment platforms)
+  ☐  Authentication and security fundamentals
+Q3.  You led or co-led a project that shipped with a bug or failure in production. What happened, what was your role in it, and how did you handle it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q4.  How do you explain a technical constraint — like why an API rate limit prevents a feature — to someone who has never written code?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q5.  What is the most important thing you look for when reviewing a pull request?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Correctness — does it do what it is supposed to do?
+  ○  Code quality and readability — can the next person understand it?
+  ○  Performance implications — will this slow things down at scale?
+  ○  Whether it has tests — anything untested is a liability
+B. LEADERSHIP & COMMUNICATION
+Q6.  The core committee requests a major feature addition midway through the sprint. Your team has already committed to a deadline. How do you handle this conversation?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q7.  Your Frontend Tech Lead and Backend Tech Lead have built two components that are fundamentally incompatible — different data shapes, different API contracts. Both are convinced the other should adapt. How do you resolve this?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  How would you structure a fortnightly progress update for the core committee so they stay informed without being overwhelmed by technical details?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  A critical bug is discovered in production the night before a major demo. Walk us through your decision-making and communication process.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  What does it mean to you for this App Dev project to be genuinely successful — not just submitted and finished?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. TEAM DYNAMICS & PEOPLE
+Q11.  It is mid-semester. Two Tech Leads have exams and estimate zero output for the next week. The core committee deadline does not move. What is your plan?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q12.  You notice interns are only doing trivial tasks — fixing typos, updating placeholder text — with no exposure to real engineering. Do you intervene?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Yes — I restructure intern tasks to include meaningful feature work
+  ○  Yes — but only gradually so it does not slow down the sprint
+  ○  No — foundational tasks teach discipline and attention to detail
+  ○  I discuss it with the Tech Leads first before making any changes
+Q13.  A team member is consistently underdelivering despite check-ins. What is your process from this point forward?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you keep a volunteer team motivated on an unpaid project during exam season?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Describe your personal working style. How do you manage your own deliverables without becoming the team's bottleneck?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & JUDGMENT
+Q16.  If you had to choose one north-star metric to measure whether this App Dev project succeeded — what would it be and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  You discover three weeks before the deadline that a core dependency your backend relies on has a critical unpatched security vulnerability. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Stop all feature work and patch the vulnerability immediately
+  ○  Assess the actual exposure risk — if it is low in your use case, document and continue
+  ○  Switch to an alternative dependency, even if it adds engineering effort
+  ○  Escalate to the core committee before making any technical decisions
+Q18.  When you look at apps built by college teams, what is the most common mistake you see — and how would you make sure this project does not repeat it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  How do you decide when a project is 'good enough to ship' versus when it still needs more work?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  Do you have any questions for us about the project scope, the core committee's expectations, or how this team will be evaluated?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 2 — PRODUCT MANAGER
+The Product Manager owns the experience and direction of the application being built. They ensure the team is building something that users will actually find useful — not just a technically complete but hollow product. This means translating user needs into requirements, keeping the team in sync, protecting the project from scope creep, tracking deadlines, and measuring whether the build is heading in the right direction. This role is designed for college students — structured thinking, communication, and user empathy matter as much as prior experience.
+A. BACKGROUND & EXPERIENCE
+Q1.  Have you ever managed a timeline or coordinated a group project where multiple people had different responsibilities? Walk us through how you kept it on track.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Describe an app you use daily. If you were its Product Manager, what is one feature you would add and one you would remove — and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  Have you ever been part of a project that built something nobody actually used? What went wrong, and what should have been caught earlier?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE, APTITUDE & PRODUCT SENSE
+Q4.  How do you decide what to build first when everything on the backlog feels equally important?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Whatever the core committee most recently asked for
+  ○  Highest user impact relative to engineering effort
+  ○  Whatever the Tech Leads can build fastest
+  ○  Whatever is easiest to demo to stakeholders
+Q5.  A Tech Lead tells you a feature is 'technically impossible' to deliver by the deadline. A core committee member is expecting it. How do you handle both conversations?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  Which tools or methods have you used to track project progress? Select all that apply.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Notion / Confluence for documentation
+  ☐  Trello / Jira / Asana for task management
+  ☐  Google Sheets or Excel trackers
+  ☐  GitHub Projects or similar dev boards
+  ☐  Weekly standup meetings
+  ☐  None yet — but I am ready to learn
+Q7.  What is the most important thing a Product Manager does that a Project Manager does not?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & MANAGEMENT
+Q8.  Scenario: It is mid-semester. Half the team has exams and progress has stalled. The core committee deadline is unchanged. What is your step-by-step action plan?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Scenario: The Frontend team has been waiting two weeks on an API from the Backend team, and the Backend Tech Lead is unresponsive. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Escalate to the Project Lead immediately
+  ○  Reach out to the Backend Tech Lead directly to understand the blocker
+  ○  Restructure the sprint so the Frontend team works on non-dependent features
+  ○  Ask the core committee to intervene
+Q10.  Scenario: The Project Lead has communicated a feature to the core committee that your team cannot realistically build before the deadline. How do you handle this?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  Scenario: User testing feedback shows that users consistently misunderstand a core feature of the app. How do you respond?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Redesign the feature from scratch based on the feedback
+  ○  Investigate further — run more tests before making a decision
+  ○  Improve onboarding and in-app guidance for the feature
+  ○  Bring the findings to the team and decide together
+Q12.  How would you measure whether the app your team is building is actually useful — beyond download counts or task completion?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & FIT
+Q13.  If you could give this App Dev project one competitive advantage that would make it genuinely different from typical college projects — what would it be?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you personally stay current on trends in app design and development without getting overwhelmed?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Tell us something about yourself — an interest, project, or perspective — that will not appear on your resume but that makes you a stronger candidate.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q16.  How do you define 'done' for a feature? What conditions must be true before it is marked complete?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  Describe a time someone gave you difficult feedback on your organizational or communication style. How did you respond and what changed?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is the single biggest mistake most college app projects make — and how would you make sure this team does not repeat it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If user research shows that the app direction needs a significant pivot three weeks before the deadline — what do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Pivot fully — building the wrong thing is worse than a deadline miss
+  ○  Partial pivot — implement the core change but preserve as much completed work as possible
+  ○  Hold direction — a pivot this late will collapse the project
+  ○  Present both options to the Project Lead and core committee before deciding
+Q20.  Do you have any questions for us about the project scope, the team, or what success looks like for this role?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 3 — TECH LEADS (FRONTEND, BACKEND, DEVOPS & QA)
+Tech Leads on the App Dev project own the technical execution within their domain — Frontend, Backend, DevOps, or QA. They are responsible for architecture decisions within their track, code quality, intern mentorship, and delivery against sprint goals. They collaborate closely with the Project Lead and Product Manager and are expected to think as both an engineer and a team builder. These are college students stepping into technical leadership for the first time — depth and willingness to mentor are equally critical.
+DOMAIN SELECTION
+Q0.  Which Tech Lead domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  Frontend (UI/UX implementation, component architecture, performance)
+  ○  Backend (API development, database design, server-side logic)
+  ○  DevOps (CI/CD pipelines, containerization, deployment, infrastructure)
+  ○  QA (test strategy, automation, bug reporting, quality gates)
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex technical project you have built or meaningfully contributed to. What was your specific role and what would you do differently now?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Have you ever mentored or taught a technical concept to a junior peer? Describe your approach and what you learned from teaching.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  If an intern keeps making the same coding mistake after you have explained it twice — what is your next move?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Show them the fix directly — deadlines matter
+  ○  Try a different explanation — the issue is likely how I taught it, not them
+  ○  Pair-program with them until they understand the root cause
+  ○  Escalate to the Project Lead for additional support
+Q4.  Tell us about a time you had to learn a new technology or framework quickly for a project. How did you approach it and what was the outcome?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. LEADERSHIP & TEAM DYNAMICS
+Q5.  How do you balance writing code yourself versus guiding and teaching your interns — especially when you are under deadline pressure?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  You disagree with a technical approach taken by another Tech Lead on an adjacent domain. How do you handle it?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Raise it privately with that Tech Lead in a one-on-one
+  ○  Bring it to the Project Lead to resolve
+  ○  Document the concern and raise it at the next standup
+  ○  Accept it — it is their domain
+Q7.  Your intern has been stuck on a bug for two days but has not asked for help. How do you address this without making them feel judged?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  The Product Manager sets a deadline that requires cutting corners on code quality to meet it. Do you comply or push back? What is your reasoning?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q9.  A critical bug is found in your team's code right before a demo to the core committee. Walk us through your step-by-step debugging and communication process.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  What does good technical documentation look like to you, and how do you approach writing it for a module you built?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  What do you always look for in a code review, and what do you consider out of scope for a review?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q12.  When making a technology or tooling decision for your domain, what factors do you consider?
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Team familiarity with the tool
+  ☐  Community support and documentation quality
+  ☐  Performance requirements of the project
+  ☐  Long-term maintainability
+  ☐  Cost / open-source availability
+  ☐  How quickly interns can get up to speed
+D. DOMAIN-SPECIFIC TECHNICAL QUESTIONS
+Frontend Track
+Q13.  Explain the virtual DOM and why frameworks like React use it. How does it improve performance compared to directly manipulating the real DOM?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you approach state management in a medium-to-large React application? What options exist and when would you choose each?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Walk us through the strategies you use to ensure a web application is responsive across mobile and desktop screens.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Backend Track
+Q16.  Explain the difference between REST and GraphQL. For a team-built application with clearly defined entities, which would you choose and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  How would you design a database schema for a simple college event management app — users, events, registrations, and attendance? Walk us through your thinking.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  Explain how you would securely handle user authentication in a web application. What mechanisms would you use and what mistakes would you avoid?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+DevOps Track
+Q19.  Explain what Docker is and why it is useful for a team where members use Windows, Mac, and Linux. Walk us through how you would containerize a simple Node.js + PostgreSQL application.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  Walk us through what happens in a standard CI/CD pipeline for a web application — from a developer pushing code to the change being live in production.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 4 — INTERNS (FRONTEND, BACKEND, DEVOPS & QA)
+Interns are the core builders of the App Dev project. No prior industry experience is required — what matters is curiosity, coachability, and the ability to contribute as part of a team. Interns will be embedded within one of the domain sub-teams, working under their Tech Lead and contributing to real features, tests, and infrastructure. This is a real engineering environment where you will learn by doing.
+DOMAIN SELECTION
+Q0.  Which intern domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  Frontend (UI/UX implementation, component building, CSS/styling)
+  ○  Backend (API development, database queries, server-side logic)
+  ○  DevOps (CI/CD, containerization, deployment, cloud infrastructure)
+  ○  QA (manual testing, test case writing, automation basics, bug reporting)
+A. BACKGROUND & EXPERIENCE
+Q1.  Tell us about a coding project, assignment, or personal experiment you are most proud of — however small. What did you build and what did you learn from it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  What programming languages, frameworks, or tools are you most comfortable with right now? Be specific and honest.
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+Q3.  Have you built any small projects outside of class — a personal website, a script, a mobile app, a clone? Tell us about it.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q4.  Have you ever worked on a group project where collaboration broke down? How did you handle it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE & APTITUDE
+Q5.  Why do you want to join this App Dev project team — rather than building your own side project or doing another course?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  If you are given a task that uses a technology you have never worked with before, what is your first move?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Read the official documentation and start experimenting with small examples
+  ○  Ask the Tech Lead for a tutorial before doing anything
+  ○  Find a YouTube walkthrough and replicate it step by step
+  ○  Find a similar open-source project on GitHub and adapt from there
+Q7.  How do you respond when your Tech Lead tells you the code you submitted is not good enough and needs to be redone?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  Describe a time you had to learn something challenging in a short amount of time — inside or outside of tech. What was your approach?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Are you more comfortable working independently on a focused task or collaborating closely with teammates?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  I strongly prefer working independently
+  ○  I lean independent but check in regularly
+  ○  I lean collaborative — I think better with others
+  ○  I strongly prefer close collaboration
+Q10.  What is a hobby, interest, or activity outside of coding and academics that you think says something interesting about who you are?
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q11.  Scenario: You have been assigned a task and the Tech Lead's instructions are unclear. They are currently in a meeting. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Wait until the Tech Lead is available and do nothing in the meantime
+  ○  Make a reasonable attempt based on your best interpretation and document your assumptions
+  ○  Send a message so they can respond when free, and start something adjacent in the meantime
+  ○  Ask another intern if they understand the task
+Q12.  Scenario: You have been stuck on a bug for six hours and feel embarrassed to ask for help. What do you do — and what does this tell you about yourself?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q13.  Scenario: It is the day before a deadline and you realize your code has an error that will break the build. What is your immediate response?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Fix it quietly — only report if it cannot be resolved in time
+  ○  Notify the Tech Lead immediately, explain the issue, and give an honest estimate of fix time
+  ○  Work through the night to fix it before informing anyone
+  ○  Ask another intern to review and help debug
+Q14.  Tell us about a mistake you made in a project or assignment. How did you fix it and what did you take away from the experience?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  If the Product Manager gives you a task, but your Tech Lead tells you to do something different — whose direction do you follow, and how do you handle the conflict?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. FOUNDATIONAL TECHNICAL KNOWLEDGE
+Q16.  What is Git and why do development teams use version control? Have you used basic Git commands — pull, commit, push, branching?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Yes — I use Git regularly including branching and resolving merge conflicts
+  ○  I have used basic commands (commit, push) but not branching or merging
+  ○  I have heard of Git but not used it in a real project
+  ○  I am entirely new to Git
+Q17.  Explain what an API is in your own words. How would you explain it to someone who has never coded?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is Object-Oriented Programming? Explain one of its core principles (inheritance, encapsulation, polymorphism) using an analogy that makes sense to you.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If a webpage shows a '404 Not Found' error, what does that mean — and what would you do first to debug it?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  The resource at that URL does not exist — I would check if the route or file path is correct
+  ○  The server is down — I would check if the backend is running
+  ○  There is a database error — I would look at server logs
+  ○  The network is unavailable — I would check my internet connection
+Q20.  Do you have any questions for us about what you will be working on, how interns are supported, or what a typical week looks like on this project?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+— END OF APP DEV INTERVIEW QUESTION BANK —\n========== d:\TDC-3\IntelliFlow_AIProd_Interview_QuestionBank.docx ==========\nTHE DEVELOPER COMMUNITY
+INTERVIEW QUESTION BANK
+INTELLIFLOW — AI PRODUCTIVITY & AUTOMATION
+Automating the Repetitive. Amplifying the Human.
+PROJECT OVERVIEW
+IntelliFlow is about building AI-powered tools that eliminate friction, automate repetitive workflows, and give people back their most valuable resource — time. Interns will design and engineer LLM-driven solutions — from prompt engineering and RAG pipelines to API integrations and end-to-end workflow automation — working in specialised sub-teams (Prompt & AI Engineering, Backend, and Integration) under Tech Leads and a Project Lead. The goal is not just to build tools that impress in a demo — but tools that users genuinely adopt into their daily workflow.
+FORMAT GUIDE FOR AI AGENT
+Each question block is tagged with a [FIELD_TYPE] label. The AI agent must render the field type exactly as indicated:
+[SHORT TEXT]  Single-line text input
+[LONG TEXT]  Multi-line text area (up to 300 words)
+[RADIO]  Single-select radio buttons — one option only
+[DROPDOWN]  Dropdown menu — single selection
+[MULTI-CHOICE]  Checkboxes — select all applicable options
+ROLE 1 — PROJECT LEAD
+The Project Lead is the strategic and technical centre of IntelliFlow. They translate the core committee's high-level goals — which workflows to automate, which processes to eliminate — into a concrete technical roadmap executed by Tech Leads and Interns. They must understand the full stack of AI tooling: LLM APIs, prompt engineering, automation platforms, backend services, and integration layers. Critically, they must frame results in outcome language: not 'the model scored 0.87 ROUGE' but 'this tool saves 3 hours per week per user.' Identifying risks — prompt reliability, hallucination rates, API failures — before they become user-facing problems is a core part of their mandate.
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex AI tool, automation, or LLM-integrated project you have built or contributed to. What was the problem, the stack, and the impact?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  How familiar are you with the following AI tool building blocks? Select all you have hands-on experience with.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  OpenAI / Anthropic / Gemini API integration
+  ☐  Prompt engineering and system prompt design
+  ☐  Retrieval-Augmented Generation (RAG) and vector databases
+  ☐  LangChain, LlamaIndex, or similar orchestration frameworks
+  ☐  Workflow automation (Zapier, Make, n8n, or custom scripts)
+  ☐  API design for AI-powered tools (FastAPI, Node.js, etc.)
+  ☐  Evaluation frameworks for LLM outputs (RAGAS, custom evals)
+Q3.  You led or contributed to a project where an AI tool failed in real use — outputs were wrong, users abandoned it, or it behaved unexpectedly. What happened and what did you learn?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q4.  How do you explain the concept of hallucination to a non-technical stakeholder who wants to automate a critical workflow using an LLM?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q5.  The prompt your team designed produces correct outputs 78% of the time. The core committee demo is in 48 hours. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Demo it with full transparency — explain the 78% and what it means in real usage
+  ○  Ask for a delay and explain the risk of a live hallucination in front of stakeholders
+  ○  Demo only the stable subset of the tool's capabilities
+  ○  Consult the team first, then make a collective decision
+B. LEADERSHIP & COMMUNICATION
+Q6.  The core committee wants a fully automated workflow by Friday. Your Prompt Engineer says the LLM output is unreliable for 20% of edge cases. How do you navigate both conversations?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q7.  You receive feedback from the core committee that the tool your team built does not feel like something users would adopt — it is technically correct but clunky. How do you respond?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  How would you structure a fortnightly update to the core committee on IntelliFlow's progress — keeping them engaged without overwhelming them with LLM jargon?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  A core committee member asks why the AI tool cannot just 'be smarter' and fix its own errors. How do you respond in the moment without being condescending?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  What does genuine success look like for IntelliFlow — not just technical completion, but real-world adoption?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. TEAM DYNAMICS & PEOPLE
+Q11.  Your Prompt Engineer and Backend Tech Lead are disagreeing about whether to use a structured JSON output from the LLM or free text with post-processing. Both have valid technical arguments. How do you resolve this?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Pick the approach I believe is more reliable and document the reasoning
+  ○  Run a quick experiment with both and let data decide
+  ○  Let the Prompt Engineer decide since this is a prompt-layer concern
+  ○  Call a team discussion, get both perspectives, and reach consensus
+Q12.  It is mid-semester. Key team members have exams and the core committee deadline does not move. What is your realistic plan?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q13.  A team member is consistently missing their deliverables despite check-ins. What is your process?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you keep a team motivated when the LLM outputs keep failing, the prompt iteration feels endless, and results are not coming?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Describe your personal work style. How do you manage your own deliverables without becoming the bottleneck for the whole team?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & JUDGMENT
+Q16.  If you had to choose one workflow problem faced by college students that IntelliFlow should solve first — what would it be and how would you validate that assumption?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  You discover that the integration your team built relies on a third-party API that has just announced rate limiting changes that would break your core workflow. The deadline is in a week. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Immediately escalate to the core committee and request a scope change
+  ○  Build a workaround using a different API or caching strategy
+  ○  Assess the impact — if most use cases are unaffected, document the limitation and ship
+  ○  Convene the team to assess options before any communication externally
+Q18.  What is your honest view on where AI automation is overhyped right now — and how does that perspective affect the way you would approach IntelliFlow?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  How do you evaluate whether a workflow is actually worth automating versus just being automated because it is technically possible?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  Do you have any questions for us about the project scope, the core committee's expectations, or how success will be measured for this role?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 2 — PRODUCT MANAGER
+The Product Manager of IntelliFlow owns the vision of the tool from the user's perspective. They ensure the team is building something people will actually use — not just something that technically works. This means defining what 'good' looks like for an AI-powered tool, protecting the project from scope creep, tracking deadlines, and ensuring every team member understands what they are building and why. This is a management and strategy role designed for college students — curiosity, empathy for users, and structured thinking matter as much as prior experience.
+A. BACKGROUND & EXPERIENCE
+Q1.  Have you ever managed a timeline, coordinated a group project, or run an event where multiple people had different responsibilities? Walk us through how you kept it organized.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Describe an AI tool or automation you have used regularly — a chatbot, a writing assistant, an email sorter. If you were its Product Manager, what would you change and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  Have you ever been part of a project that built something nobody actually used? What went wrong, and what should have been caught earlier?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE, APTITUDE & PRODUCT SENSE
+Q4.  How do you decide what to build first when everything feels equally important?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Whatever the core committee asked for most recently
+  ○  Highest user impact relative to engineering effort
+  ○  Whatever the Tech Leads can build fastest
+  ○  Whatever is easiest to demo to stakeholders
+Q5.  The AI tool your team built is technically impressive but users find it confusing. What is your diagnosis and what do you do?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  Which of these tools or methods have you used to manage a project? Select all that apply.
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Notion / Confluence for documentation
+  ☐  Trello / Jira / Asana for task management
+  ☐  Google Sheets or Excel trackers
+  ☐  GitHub Projects or similar dev boards
+  ☐  Weekly standups or structured team meetings
+  ☐  None yet — but I am ready to learn
+Q7.  What is the most important thing a Product Manager does on a project that is AI-powered — and how is it different from managing a regular software project?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & MANAGEMENT
+Q8.  Scenario: It is Week 4 of the project. The LLM outputs look great in testing but fall apart on real user inputs. The core committee demo is in two weeks. What do you do?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Scenario: The Prompt Engineer and the Backend Tech Lead are both waiting for the other to take ownership of a critical integration. Nobody is moving. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Escalate to the Project Lead immediately
+  ○  Set up a meeting, define the interface contract, and assign ownership explicitly
+  ○  Decide unilaterally and document it
+  ○  Ask the core committee to clarify responsibilities
+Q10.  Scenario: A stakeholder from the core committee requests a completely new feature — one week before the demo. How do you handle this conversation?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  Scenario: User feedback from a test session shows that people are not using the tool's most technically impressive feature at all. How do you respond?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Remove the feature — if users are not using it, it is noise
+  ○  Redesign the onboarding so users discover it better
+  ○  Investigate why — observation bias might be skewing the feedback
+  ○  Bring the data to the Project Lead and decide together
+Q12.  How would you measure whether IntelliFlow's tools are genuinely useful — beyond just technical metrics?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. VISION & FIT
+Q13.  If you could give IntelliFlow one distinctive feature or positioning that would make it genuinely different from existing AI tools — what would it be?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  How do you personally stay current on trends in AI products and automation without getting lost in hype?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  Tell us something about yourself — an interest, project, or perspective — that will not appear on your resume but that you think makes you a stronger candidate.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q16.  How do you define 'done' for an AI-powered feature? What must be true before you mark it complete?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  Describe a time someone gave you difficult feedback on your organizational or communication style. How did you respond and what changed?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  Where do you think most AI tools fail their users — and how would you make sure IntelliFlow does not repeat that mistake?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If the team is three weeks in and user tests are coming back consistently negative — what do you do to course-correct before it is too late?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Run an emergency design sprint and rebuild the core flows
+  ○  Go back to first principles — re-interview target users to understand what they actually need
+  ○  Show the results to the core committee and ask for a scope revision
+  ○  Identify the one biggest pain point from feedback and fix that first
+Q20.  Do you have any questions for us about IntelliFlow's scope, the user we are building for, or how this role will be evaluated?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 3 — TECH LEADS (PROMPT & AI ENGINEERING, BACKEND & INTEGRATION)
+Tech Leads on IntelliFlow are responsible for the technical execution of each domain — Prompt & AI Engineering, Backend Services, and Integration. They own architecture decisions, code quality, intern mentorship, and delivery within their track. They work closely with the Project Lead and Product Manager, and are expected to think both as engineers and as team builders. These roles are designed for college students stepping into technical leadership for the first time — depth and willingness to mentor matter equally.
+DOMAIN SELECTION
+Q0.  Which Tech Lead domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  Prompt & AI Engineering (LLM integration, prompt design, RAG, evals)
+  ○  Backend Development (API development, data handling, server infrastructure)
+  ○  Integration & Automation (workflow automation, third-party API integration, n8n/Zapier equivalent)
+A. BACKGROUND & TECHNICAL FOUNDATION
+Q1.  Walk us through the most complex technical project you have built or meaningfully contributed to. What was your specific role, and what would you do differently?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  Have you ever mentored or taught a technical concept to a junior peer? Describe your approach and what you learned from the experience.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q3.  If an intern keeps making the same technical mistake after you have explained it twice, what is your next move?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Show them the fix directly — deadlines do not allow much time for re-teaching
+  ○  Try a completely different explanation — the issue is likely how I taught it, not them
+  ○  Pair-program with them until they understand the root cause
+  ○  Escalate to the Project Lead for additional support
+Q4.  Tell us about a time you had to pick up a completely new technology or framework quickly. How did you approach it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. LEADERSHIP & TEAM DYNAMICS
+Q5.  How do you balance doing the technical work yourself versus teaching interns to do it — especially when you are under deadline pressure?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  You disagree with a technical approach taken by another Tech Lead on an adjacent domain. How do you handle this?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Raise it privately with that Tech Lead first
+  ○  Bring it to the Project Lead to facilitate a resolution
+  ○  Document the concern and raise it at the next team standup
+  ○  Accept it — it is their domain
+Q7.  Your intern has been stuck for two days and has not reached out for help. How do you address this without making them feel judged?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  The Product Manager sets a deadline that requires cutting corners on your engineering standards. Do you comply or push back? What is your reasoning?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q9.  A critical failure is discovered in your team's component the night before a demo to the core committee. Walk us through your step-by-step response.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q10.  What does a good piece of technical documentation look like to you, and how do you approach writing it for something you built?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q11.  What do you always check for during a code or prompt review, and what do you consider out of scope?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q12.  When making a technology or tooling decision for your domain, what factors do you weigh?
+[FIELD_TYPE: MULTI-CHOICE — Select All That Apply]
+  ☐  Team familiarity with the tool
+  ☐  Community support and documentation quality
+  ☐  Performance requirements of the project
+  ☐  Long-term maintainability
+  ☐  Cost / open-source availability
+  ☐  How quickly interns can contribute with it
+D. DOMAIN-SPECIFIC TECHNICAL QUESTIONS
+Prompt & AI Engineering Track
+Q13.  Explain the concept of few-shot prompting. When does it help, and when does it not?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q14.  What is Retrieval-Augmented Generation (RAG)? Walk through how you would build a simple RAG pipeline for a project that answers questions over a company's documents.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  How do you evaluate whether a prompt change actually improved your system? What does your eval process look like?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Backend Development Track
+Q16.  Walk us through how you would design and build an API endpoint that receives a user query, sends it to an LLM, and returns a structured JSON response — including error handling.
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q17.  Explain the difference between REST and GraphQL. For an AI tool with unpredictable response shapes, which would you choose and why?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  How do you handle rate limiting when your backend is calling a third-party LLM API with per-minute token limits?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Integration & Automation Track
+Q19.  Describe how you would design an automation workflow that monitors a user's email inbox and automatically drafts responses using an LLM. What are the components and what could go wrong?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q20.  How do you test and validate an automation workflow — especially when LLM outputs are non-deterministic?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+ROLE 4 — INTERNS (PROMPT & AI ENGINEERING, BACKEND & INTEGRATION)
+Interns are the core contributors of IntelliFlow. No prior industry experience is expected — what matters is curiosity, coachability, and a genuine interest in how AI tools are actually built. Interns will be embedded in one of the domain sub-teams, work directly under their Tech Lead, and contribute to real deliverables — from writing and testing prompts to building backend endpoints and integration scripts.
+DOMAIN SELECTION
+Q0.  Which intern domain are you applying for?
+[FIELD_TYPE: DROPDOWN — Single Selection]
+  ○  Prompt & AI Engineering (writing, testing, and iterating on prompts and LLM pipelines)
+  ○  Backend Development (building APIs, handling data, connecting services)
+  ○  Integration & Automation (connecting tools, automating workflows, API integrations)
+A. BACKGROUND & EXPERIENCE
+Q1.  Tell us about a coding project, assignment, or personal experiment you are most proud of. What did you build, what did you learn?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q2.  What programming languages, tools, or platforms are you most comfortable with right now?
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+Q3.  Have you experimented with any AI tools, LLM APIs, or automation tools — even informally? What did you build or try?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q4.  Have you ever worked on a group project where collaboration broke down? How did you handle it?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+B. ATTITUDE & APTITUDE
+Q5.  Why do you want to work on an AI productivity and automation project specifically — rather than doing your own side projects or taking a course?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q6.  If you are given a task that uses a tool or API you have never worked with before, what is your first move?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Read the official documentation and start experimenting with small examples
+  ○  Ask my Tech Lead for a tutorial before doing anything
+  ○  Find a YouTube walkthrough and replicate it first
+  ○  Look for an open-source project using the same tool and adapt from there
+Q7.  How do you respond when your Tech Lead tells you the prompt or code you wrote is not good enough and needs to be redone?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q8.  Describe a time you had to learn something challenging quickly — inside or outside of tech. What was your strategy?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q9.  Are you more comfortable working independently or collaborating closely with teammates?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  I strongly prefer working independently
+  ○  I lean independent but check in regularly
+  ○  I lean collaborative — I think better with others
+  ○  I strongly prefer close collaboration
+Q10.  What is a hobby, interest, or activity outside of coding and academics that you think says something interesting about who you are?
+[FIELD_TYPE: SHORT TEXT]
+Answer: ________________________________________________________________________________
+C. SITUATIONAL & BEHAVIORAL
+Q11.  Scenario: Your Tech Lead gives you a task to prompt an LLM to classify customer emails, but the instructions are vague. They are in a meeting. What do you do?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Wait until they are free — it is better to get it right than guess
+  ○  Make a reasonable attempt, document your assumptions, and flag for review
+  ○  Message them so they can respond when free, and start a related task
+  ○  Ask another intern if they understand the task
+Q12.  Scenario: You have been stuck on a prompt that keeps producing bad outputs for four hours. You are hesitant to ask for help. What do you do — and what does this tell you about yourself?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q13.  Scenario: The day before a demo, you realize the automation workflow you built silently fails for one type of input. What is your immediate response?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Fix it quietly — only report if it cannot be resolved in time
+  ○  Tell the Tech Lead immediately, explain the failure case, and give a fix estimate
+  ○  Work through the night to fix it before informing anyone
+  ○  Ask another intern to help debug and review
+Q14.  Tell us about a mistake you made in a project or assignment. How did you handle it and what did you take away?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q15.  If the Product Manager gives you a task that conflicts with what your Tech Lead asked you to do — what do you do?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+D. FOUNDATIONAL TECHNICAL KNOWLEDGE
+Q16.  In your own words, what is an API and why do applications use them? Have you ever called an external API in a project?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Yes — I have called APIs and handled JSON responses in a real project
+  ○  I have done basic API calls in tutorials or coursework
+  ○  I understand the concept but have not built anything using one
+  ○  I am new to APIs entirely
+Q17.  What is a large language model (LLM) in simple terms? How would you explain what it does to someone who has never used one?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q18.  What is prompt engineering in your own words, and why does the exact wording of a prompt matter?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+Q19.  If an AI tool gives a confident-sounding but factually wrong answer, what is this called and what causes it?
+[FIELD_TYPE: RADIO — Single Choice]
+  ○  Hallucination — the model generates plausible-sounding text that is not grounded in fact
+  ○  Overfitting — the model memorized training data and is repeating it incorrectly
+  ○  Prompt failure — the question was too ambiguous and confused the model
+  ○  Context drift — the model lost track of the conversation context
+Q20.  Do you have any questions for us about IntelliFlow, what you will be working on, how interns are supported, or what a typical week looks like?
+[FIELD_TYPE: LONG TEXT]
+Answer (up to 300 words): ________________________________________________________________________________
+_______________________________________________________________________________________________
+— END OF INTELLIFLOW INTERVIEW QUESTION BANK —

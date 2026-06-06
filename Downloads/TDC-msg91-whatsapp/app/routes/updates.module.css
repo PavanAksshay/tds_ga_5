@@ -1,0 +1,170 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  color: var(--color-on-surface);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: var(--family-body);
+  font-size: 1.125rem;
+  color: var(--color-on-surface-muted);
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--color-on-surface-muted);
+  background: var(--color-surface-container-lowest);
+  border-radius: var(--radius-none);
+  border: 1px dashed var(--color-border);
+}
+
+.card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-none);
+  padding: var(--space-6) var(--space-8);
+  position: relative;
+}
+
+/* Timeline dot indicator */
+.card::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-border-interactive);
+}
+
+/* Fallback timeline line if wrapped in a relative container with a left border */
+@media (min-width: 840px) {
+  .feed {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-8);
+    position: relative;
+    margin-left: var(--space-4);
+  }
+  .card::before {
+    left: calc(var(--space-8) * -1 - 7px);
+  }
+}
+
+.cardHeader {
+  margin-bottom: var(--space-4);
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--family-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badgeChangelog {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.badgeNews {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.badgeUpdate {
+  background: rgba(241, 196, 15, 0.1);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.badgeAnnouncement {
+  background: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+  border: 1px solid rgba(155, 89, 182, 0.2);
+}
+
+.typeIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.date {
+  font-family: var(--family-mono);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-muted);
+}
+
+.cardTitle {
+  font-family: var(--family-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+.cardContent {
+  color: var(--color-on-surface-muted);
+  line-height: 1.6;
+}
+
+.cardContent p {
+  margin-bottom: var(--space-4);
+}
+
+.cardContent p:last-child {
+  margin-bottom: 0;
+}
+
+.cardFooter {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--family-mono);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-subtle);
+}
+
+.bold {
+  color: var(--color-on-surface);
+  font-weight: 700;
+}
+
+.role {
+  color: var(--color-on-surface-muted);
+}
+

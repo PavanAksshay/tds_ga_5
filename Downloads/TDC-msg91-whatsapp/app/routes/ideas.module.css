@@ -1,0 +1,199 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-20) var(--space-6);
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  color: var(--color-on-surface-muted);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  background: var(--color-surface-container-low);
+  padding: var(--space-10);
+  border: 1px solid var(--color-border);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.sectionTitle {
+  font-family: var(--family-mono);
+  font-size: 11px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field label {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.input, .textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-on-surface);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--family-mono);
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--color-border-interactive);
+  background: var(--color-surface-elevated);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--family-body);
+}
+
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.checkboxLabel:hover {
+  background: var(--color-surface-elevated);
+  border-color: var(--color-on-surface-subtle);
+}
+
+.checkboxLabel input {
+  margin-top: 3px;
+}
+
+.checkboxText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checkboxTitle {
+  font-family: var(--family-mono);
+  font-size: 11px;
+  color: var(--color-on-surface);
+}
+
+.checkboxSub {
+  font-size: 10px;
+  color: var(--color-on-surface-muted);
+}
+
+.submitBtn {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  border: none;
+  padding: var(--space-4) var(--space-10);
+  font-family: var(--family-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: fit-content;
+  align-self: center;
+}
+
+.submitBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-20) 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.successIcon {
+  color: #4ade80;
+  margin-bottom: var(--space-6);
+}
+
+.successTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.successText {
+  color: var(--color-on-surface-muted);
+  max-width: 400px;
+  margin-bottom: var(--space-10);
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--space-12) var(--space-4);
+  }
+  .form {
+    padding: var(--space-6);
+  }
+  .submitBtn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,211 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  min-height: 500px;
+}
+
+/* ── Left Content ── */
+.content {
+  padding: var(--space-16) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+  border-left: 1px solid var(--color-border);
+}
+
+.label {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--color-on-surface-subtle);
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.description {
+  font-family: var(--family-body);
+  font-size: 1.25rem;
+  color: var(--color-on-surface);
+  line-height: 1.85;
+  max-width: 520px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Right Pulse/Terminal ── */
+.pulseContainer {
+  position: relative;
+  background: #000;
+  padding: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminal {
+  flex: 1;
+  background: #050505;
+  border: 1px solid #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CRT EFFECTS */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 50%
+  );
+  background-size: 100% 2px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 6;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.terminalHeader {
+  padding: var(--space-2) var(--space-4);
+  background: #080808;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.headerTitle {
+  font-family: var(--family-mono);
+  font-size: 11px;
+  color: var(--color-on-surface-subtle);
+  letter-spacing: 0.1em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #222;
+}
+
+.dotActive {
+  background: #fff;
+  box-shadow: 0 0 8px #fff;
+}
+
+.terminalBody {
+  padding: var(--space-6);
+  font-family: var(--family-mono);
+  font-size: 12px;
+  color: var(--color-on-surface-muted);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column-reverse; /* Newest at bottom, but push up */
+  gap: var(--space-1);
+}
+
+.logEntry {
+  display: flex;
+  gap: var(--space-4);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: entryIn 0.4s forwards;
+}
+
+@keyframes entryIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timestamp {
+  color: var(--color-on-surface-subtle);
+  flex-shrink: 0;
+}
+
+.event {
+  color: var(--color-on-surface);
+}
+
+.highlight {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.footer {
+  padding: var(--space-3) var(--space-6);
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.statusText {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-subtle);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .root {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    padding: var(--space-12) 16px var(--space-8);
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .pulseContainer {
+    min-height: auto;
+    padding: var(--space-4) 0 0 0; /* No side padding so terminal hits edges */
+  }
+
+  .terminal {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .logEntry:nth-child(n+6) {
+    display: none;
+  }
+}

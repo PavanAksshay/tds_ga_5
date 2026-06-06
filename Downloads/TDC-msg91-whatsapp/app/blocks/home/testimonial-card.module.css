@@ -1,0 +1,72 @@
+.root {
+  padding: var(--space-16) var(--space-6);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionLabel {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.12em;
+  margin-bottom: var(--space-8);
+  align-self: flex-start;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #000000;
+  padding: var(--space-10);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  border: 1px solid #e0e0e0;
+}
+
+.quoteMarkRow {
+  font-family: var(--family-display);
+  font-size: 72px;
+  line-height: 1;
+  color: #000000;
+  opacity: 0.12;
+  user-select: none;
+}
+
+.quote {
+  font-family: var(--family-display);
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  width: 32px;
+  height: 2px;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.attribution {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: #000000;
+  opacity: 0.5;
+  letter-spacing: 0.08em;
+}

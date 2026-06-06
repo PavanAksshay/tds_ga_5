@@ -1,0 +1,120 @@
+.card {
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-interactive);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.tier {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  background: var(--color-surface-container-highest);
+  color: var(--color-on-surface);
+  padding: 2px 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.id {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  line-height: 1.15;
+}
+
+.tagline {
+  font-family: var(--family-body);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-5);
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.tag {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.statusOpen {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  display: inline-block;
+}
+
+.viewBtn {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-border-interactive);
+  padding: 6px 16px;
+  color: var(--color-on-surface);
+  background: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.viewBtn:hover {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+}

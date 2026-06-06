@@ -1,0 +1,15 @@
+.richText {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.highlight {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.italic {
+  font-style: italic;
+  color: inherit;
+}

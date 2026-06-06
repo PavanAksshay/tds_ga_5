@@ -1,0 +1,194 @@
+.container {
+  padding: var(--space-6);
+  color: var(--color-on-surface);
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-3xl, 2rem);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-on-surface-muted);
+  margin-bottom: var(--space-8);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-none);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-container-low);
+}
+
+.companyName {
+  font-family: var(--family-display);
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 700;
+}
+
+.statusBadge {
+  font-family: var(--family-mono);
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+}
+
+.statusNEW {
+  background: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+
+.statusIN_PROGRESS {
+  background: rgba(241, 196, 15, 0.2);
+  color: #f1c40f;
+}
+
+.statusRESOLVED {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.cardBody {
+  padding: var(--space-6);
+}
+
+.field {
+  margin-bottom: var(--space-2);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 600;
+  color: var(--color-on-surface-muted);
+  min-width: 80px;
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.messageBox {
+  margin-top: var(--space-4);
+  background: var(--color-surface-container-low);
+  padding: var(--space-4);
+  border-radius: var(--radius-none);
+  border: 1px solid var(--color-border);
+}
+
+.message {
+  margin-top: var(--space-2);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.date {
+  margin-top: var(--space-4);
+  font-family: var(--family-mono);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-subtle);
+}
+
+.cardFooter {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-container-low);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.updateForm {
+  flex: 1;
+}
+
+.actionBtn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-family: var(--family-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.btnDanger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.btnDanger:hover:not(:disabled) {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.formRow {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.select, .input {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-on-surface);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-none);
+  font-family: var(--family-body);
+}
+
+.input {
+  flex: 1;
+}
+
+.btn {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  border: none;
+  border-radius: var(--radius-none);
+  padding: var(--space-2) var(--space-4);
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--color-on-surface-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-none);
+}
+

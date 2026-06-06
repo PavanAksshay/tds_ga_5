@@ -1,0 +1,339 @@
+/* ── Section: two equal columns, no fixed height on root ── */
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ══════════════════════════════
+   LEFT — content col
+══════════════════════════════ */
+.left {
+  padding: var(--space-12) var(--space-10) var(--space-12) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  border-right: 1px solid var(--color-border);
+}
+
+.label {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--color-on-surface-subtle);
+  text-transform: uppercase;
+}
+
+.heading {
+  font-family: var(--family-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.subheading {
+  font-family: var(--family-body);
+  font-size: 1.125rem;
+  color: var(--color-on-surface-muted);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* ── Step nav ── */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: var(--space-6);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  background: var(--color-surface-container-low);
+}
+
+.navItemActive {
+  border-left-color: var(--color-on-surface);
+  background: var(--color-surface-container-low);
+}
+
+.navStep {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--color-on-surface-subtle);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.navItemActive .navStep {
+  color: var(--color-on-surface);
+}
+
+.navTitle {
+  font-family: var(--family-mono);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--color-on-surface-muted);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.navItemActive .navTitle {
+  color: var(--color-on-surface);
+}
+
+/* ══════════════════════════════
+   RIGHT — spotlight reel
+   All cards positioned absolute relative to this container.
+   Height matches the left panel via grid row stretch.
+══════════════════════════════ */
+.right {
+  position: relative;
+  overflow: hidden;
+  /* Stretch to match left height — set a min so it's never too short */
+  min-height: 480px;
+}
+
+/* ── Gradient fade masks ── */
+.maskTop,
+.maskBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.maskTop {
+  top: 0;
+  background: linear-gradient(to bottom, var(--color-surface) 0%, transparent 100%);
+}
+
+.maskBottom {
+  bottom: 0;
+  background: linear-gradient(to top, var(--color-surface) 0%, transparent 100%);
+}
+
+/* ══════════════════════════════
+   CARDS — absolutely positioned,
+   anchored to 50% of .right
+══════════════════════════════ */
+.card {
+  position: absolute;
+  top: 50%;
+  left: var(--space-8);
+  right: var(--space-8);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-6);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-container-low);
+  overflow: hidden;
+  /* transition handles movement */
+  transition:
+    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity   0.55s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Consume CSS variables passed from JS */
+  transform: translateY(calc(-50% + calc(var(--card-offset, 0) * 220px)));
+  opacity: var(--card-active-opacity, 1);
+  z-index: var(--card-z, 1);
+}
+
+.cardActive {
+  border-color: rgba(240, 240, 238, 0.35);
+  background: var(--color-surface-container);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cardStep {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--color-on-surface-subtle);
+}
+
+.cardTag {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--color-on-surface-subtle);
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.cardActive .cardTag {
+  border-color: rgba(240, 240, 238, 0.2);
+  color: var(--color-on-surface-muted);
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-surface-subtle);
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.cardActive .iconBox {
+  border-color: var(--color-on-surface);
+  color: var(--color-on-surface);
+}
+
+.cardTitle {
+  font-family: var(--family-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-on-surface-muted);
+  text-transform: uppercase;
+  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.cardActive .cardTitle {
+  color: var(--color-on-surface);
+}
+
+.cardDesc {
+  font-family: var(--family-body);
+  font-size: 0.9rem;
+  color: var(--color-on-surface-subtle);
+  line-height: 1.65;
+  flex: 1;
+  transition: color 0.3s;
+}
+
+.cardActive .cardDesc {
+  color: var(--color-on-surface-muted);
+}
+
+/* ── Progress bar ── */
+.progressTrack {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-on-surface);
+  animation: fillProgress 2.5s linear forwards;
+}
+
+@keyframes fillProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ══════════════════════════
+   Mobile
+══════════════════════════ */
+@media (max-width: 768px) {
+  .root {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    padding: var(--space-8) var(--space-6) var(--space-6);
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .nav {
+    display: none; /* Hide vertical steps navigation since it's swipeable */
+  }
+
+  .right {
+    min-height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--space-6);
+    padding: var(--space-4) var(--space-6) var(--space-12);
+    gap: var(--space-4);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .right::-webkit-scrollbar {
+    display: none;
+  }
+
+  .maskTop, .maskBottom {
+    display: none; /* Masks break horizontal layout */
+  }
+
+  .card {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    min-height: 220px;
+    min-width: 85vw;
+    flex: 0 0 85vw;
+    scroll-snap-align: start;
+    /* Force ignore JS styling overrides */
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .cardDesc, .cardTitle, .iconBox, .cardTag {
+    color: var(--color-on-surface) !important;
+  }
+
+  .progressTrack {
+    display: none; /* Disable individual progress bars when in swipe mode */
+  }
+}

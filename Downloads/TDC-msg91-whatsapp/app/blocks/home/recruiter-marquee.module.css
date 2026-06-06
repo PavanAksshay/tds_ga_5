@@ -1,0 +1,119 @@
+/* ===========================
+   RECRUITER MARQUEE SECTION
+   =========================== */
+.root {
+  padding: var(--space-10) 0;
+  background-color: var(--color-surface-container-lowest);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.label {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+/* ── Scroll container ── */
+.marqueeWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── Fade masks on left and right ── */
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-surface-container-lowest) 0%,
+    transparent 100%
+  );
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--color-surface-container-lowest) 0%,
+    transparent 100%
+  );
+}
+
+/* ── Scrolling track ── */
+.track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* 8 sets of logos: animation translates exactly -50% (first 4 sets)
+     so the loop is instantaneous and invisible */
+  animation: marqueeScroll 40s linear infinite;
+  gap: var(--space-16);
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.marqueeWrap:hover .track {
+  animation-play-state: paused;
+}
+
+/* ── Individual logo item ── */
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 80px;
+}
+
+.logoImg {
+  height: 28px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  /* Make all logos appear uniform white/muted on dark background */
+  filter: brightness(0) invert(1);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.logoItem:hover .logoImg {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .fadeLeft,
+  .fadeRight {
+    width: 80px;
+  }
+
+  .track {
+    gap: var(--space-12);
+    animation-duration: 28s;
+  }
+
+  .logoImg {
+    height: 22px;
+    max-width: 90px;
+  }
+}

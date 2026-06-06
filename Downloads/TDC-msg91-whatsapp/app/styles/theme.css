@@ -1,0 +1,55 @@
+:root {
+  /* Colors */
+  --color-surface: #000000;
+  --color-surface-elevated: #0d0d0d;
+  --color-surface-container-lowest: #050505;
+  --color-surface-container-low: #0a0a0a;
+  --color-surface-container: #111111;
+  --color-surface-container-high: #1a1a1a;
+  --color-surface-container-highest: #222222;
+  --color-on-surface: #ffffff;
+  --color-on-surface-muted: rgba(255, 255, 255, 0.7);
+  --color-on-surface-subtle: rgba(255, 255, 255, 0.4);
+  --color-primary: #ffffff;
+  --color-primary-on: #000000;
+  --color-border: #1a1a1a;
+  --color-border-interactive: #ffffff;
+  --color-accent: #ffffff;
+
+  /* Font families */
+  --family-display: 'Space Grotesk', sans-serif;
+  --family-body: 'Space Grotesk', sans-serif;
+  --family-mono: 'JetBrains Mono', monospace;
+  --family-pixel: 'VT323', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Typography */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  --text-6xl: 80px;
+
+  /* Border radius — always 0 per brutalist spec */
+  --radius-none: 0px;
+
+  /* Shadows — none per spec */
+}

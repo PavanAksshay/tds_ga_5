@@ -1,0 +1,51 @@
+.section {
+  margin-bottom: var(--space-20);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.levelLabel {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.sectionTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.itemCount {
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px;
+}
