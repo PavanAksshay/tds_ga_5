@@ -9,6 +9,7 @@ import type { Contribution } from "../services/contributions.server";
 import styles from "./profile.module.css";
 import { TerminalModal } from "../components/terminal-modal/terminal-modal";
 import { PhoneVerify } from "../components/phone-verify/phone-verify";
+import { EmailVerify } from "../components/email-verify/email-verify";
 import { ensureGithubUrl, ensureLinkedinUrl } from "~/lib/utils";
 import { SITE_URL } from "~/lib/seo";
 
@@ -235,6 +236,14 @@ function EditProfileForm({ profile, actionData }: { profile: Profile | null; act
         <PhoneVerify
           initialVerified={Boolean(profile.phone_verified)}
           initialPhone={profile.phone_number}
+        />
+      </section>
+
+      <section id="email-verification-section" className={styles.settingsSection}>
+        <h3 className={styles.sectionHeader}>EMAIL_VERIFICATION</h3>
+        <EmailVerify
+          initialVerified={Boolean((profile as any).email_verified)}
+          initialEmail={profile.email}
         />
       </section>
 

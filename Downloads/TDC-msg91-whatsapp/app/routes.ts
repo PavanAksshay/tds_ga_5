@@ -31,6 +31,8 @@ export default [
   route("api/github-webhook", "routes/api.github-webhook.ts"),
   route("api/phone-send-otp", "routes/api.phone-send-otp.ts"),
   route("api/phone-verify-otp", "routes/api.phone-verify-otp.ts"),
+  route("api/email-send-otp", "routes/api.email-send-otp.ts"),
+  route("api/email-verify-otp", "routes/api.email-verify-otp.ts"),
 
 
   // SEO Infrastructure

@@ -9,6 +9,7 @@ import {
 } from "../hooks/use-onboarding-store";
 import styles from "./onboarding.module.css";
 import { PhoneVerify } from "../components/phone-verify/phone-verify";
+import { EmailVerify } from "../components/email-verify/email-verify";
 import { SITE_URL } from "~/lib/seo";
 
 export function meta(_: Route.MetaArgs) {
@@ -24,6 +25,7 @@ export function meta(_: Route.MetaArgs) {
 type StepId =
   | "welcome"
   | "phone"
+  | "email"
   | "role"
   | "identity"
   | "avatar"
@@ -160,7 +162,7 @@ const TECH_OPTIONS = [
 ];
 
 const STEP_ORDER: StepId[] = [
-  "welcome", "phone", "role", "identity", "avatar", "org", "links", "experience", "tech", "extras", "done",
+  "welcome", "phone", "email", "role", "identity", "avatar", "org", "links", "experience", "tech", "extras", "done",
 ];
 
 const ONBOARDING_DRAFT_KEY_PREFIX = "tdc:onboarding-draft:";
@@ -240,6 +242,43 @@ function PhoneStep({
       <PhoneVerify
         initialVerified={initialVerified}
         initialPhone={initialPhone}
+        onVerifiedChange={handleVerifiedChange}
+      />
+    </div>
+  );
+}
+
+function EmailStep({
+  initialVerified,
+  initialEmail,
+  onVerified,
+  onNext,
+}: {
+  initialVerified: boolean;
+  initialEmail: string | null;
+  onVerified: (verified: boolean) => void;
+  onNext: () => void;
+}) {
+  const handleVerifiedChange = useCallback(
+    (v: boolean) => {
+      onVerified(v);
+      if (v) {
+        // Auto-advance immediately upon successful verification
+        setTimeout(() => {
+          onNext();
+        }, 800); // 800ms delay for visual success feedback
+      }
+    },
+    [onVerified, onNext]
+  );
+
+  return (
+    <div className={styles.stepContent}>
+      <div className={styles.prompt}>&gt; VERIFY_EMAIL<Cursor /></div>
+      <h2 className={styles.question}>Verify your email address.</h2>
+      <EmailVerify
+        initialVerified={initialVerified}
+        initialEmail={initialEmail}
         onVerifiedChange={handleVerifiedChange}
       />
     </div>
@@ -787,6 +826,7 @@ export async function loader({ request }: Route.LoaderArgs) {
   const { getSessionUser } = await import("../lib/supabase.server");
   const { getProfileAuthGateStatus } = await import("../services/profile.server");
   const { getPhoneStatus } = await import("../services/phone-verification.server");
+  const { getEmailStatus } = await import("../services/email-verification.server");
   const headers = new Headers();
   const user = await getSessionUser(request, headers);
   
@@ -802,6 +842,7 @@ export async function loader({ request }: Route.LoaderArgs) {
   }
   const gate = await getProfileAuthGateStatus(user.id);
   const phoneStatus = await getPhoneStatus(user.id);
+  const emailStatus = await getEmailStatus(user.id);
   return Response.json({
     userId: user.id,
     userEmail: user.email,
@@ -809,6 +850,8 @@ export async function loader({ request }: Route.LoaderArgs) {
     githubHandle: gate.githubHandle,
     phoneVerified: phoneStatus.phone_verified,
     phoneNumber: phoneStatus.phone_number,
+    emailVerified: emailStatus.email_verified,
+    emailAddress: emailStatus.email ?? user.email ?? null,
   }, { headers });
 }
 
@@ -868,12 +911,13 @@ export async function action({ request }: Route.ActionArgs) {
 
 // ─── Main component ───────────────────────────────────────
 export default function OnboardingPage() {
-  const { userId, hasGithub, githubHandle, phoneVerified, phoneNumber } = useLoaderData<typeof loader>();
+  const { userId, hasGithub, githubHandle, phoneVerified, phoneNumber, emailVerified, emailAddress } = useLoaderData<typeof loader>();
   const actionData = useActionData<{ error?: string }>();
   const [stepIndex, setStepIndex] = useState(0);
   const [visible, setVisible] = useState(true);
   const [data, setData] = useState<OnboardingData>({ ...EMPTY_ONBOARDING });
   const [isPhoneVerified, setIsPhoneVerified] = useState<boolean>(Boolean(phoneVerified));
+  const [isEmailVerified, setIsEmailVerified] = useState<boolean>(Boolean(emailVerified));
   const formRef = useRef<HTMLFormElement>(null);
   const draftKey = `${ONBOARDING_DRAFT_KEY_PREFIX}${userId}`;
 
@@ -938,6 +982,8 @@ export default function OnboardingPage() {
     if (stepIndex >= STEP_ORDER.length - 1) return;
     // Block leaving the WhatsApp step until the number is verified.
     if (STEP_ORDER[stepIndex] === "phone" && !isPhoneVerified) return;
+    // Block leaving the email step until the address is verified.
+    if (STEP_ORDER[stepIndex] === "email" && !isEmailVerified) return;
     const nextIndex = stepIndex + 1;
     const nextStep = STEP_ORDER[nextIndex];
 
@@ -953,7 +999,7 @@ export default function OnboardingPage() {
         formRef.current.submit();
       }
     }
-  }, [stepIndex, data, transition, isPhoneVerified]);
+  }, [stepIndex, data, transition, isPhoneVerified, isEmailVerified]);
 
   // keyboard shortcut
   const goNextRef = useRef(goNext);
@@ -1019,6 +1065,14 @@ export default function OnboardingPage() {
             initialVerified={isPhoneVerified}
             initialPhone={phoneNumber}
             onVerified={setIsPhoneVerified}
+            onNext={goNext}
+          />
+        )}
+        {currentStep === "email" && (
+          <EmailStep
+            initialVerified={isEmailVerified}
+            initialEmail={emailAddress}
+            onVerified={setIsEmailVerified}
             onNext={goNext}
           />
         )}
