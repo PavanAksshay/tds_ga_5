@@ -1,0 +1,204 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--family-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--color-on-surface-muted);
+}
+
+.inputRow {
+  display: flex;
+  gap: var(--space-2);
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.input,
+.codeInput {
+  flex: 1 1 180px;
+  min-width: 0;
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-on-surface);
+  font-family: var(--family-mono);
+  font-size: 0.95rem;
+  padding: var(--space-3) var(--space-4);
+}
+
+.codeInput {
+  letter-spacing: 0.5em;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.input:focus,
+.codeInput:focus {
+  outline: none;
+  border-color: var(--color-border-interactive);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font-family: var(--family-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.actionBtn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.actionBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.hint {
+  font-family: var(--family-mono);
+  font-size: 0.68rem;
+  color: var(--color-on-surface-subtle);
+}
+
+.codeMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.codeMetaActions {
+  display: inline-flex;
+  gap: var(--space-3);
+}
+
+.linkBtn {
+  background: none;
+  border: none;
+  color: var(--color-on-surface-muted);
+  font-family: var(--family-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.linkBtn:hover:not(:disabled) {
+  color: var(--color-on-surface);
+}
+
+.linkBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error {
+  font-family: var(--family-mono);
+  font-size: 0.72rem;
+  color: #ff6b6b;
+}
+
+.info {
+  font-family: var(--family-mono);
+  font-size: 0.72rem;
+  color: var(--color-on-surface-muted);
+}
+
+/* Verified state */
+.verifiedBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  width: 100%;
+}
+
+.verifiedIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4ade80;
+}
+
+.verifiedText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.verifiedLabel {
+  font-family: var(--family-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+}
+
+.verifiedNumber {
+  font-family: var(--family-mono);
+  font-size: 0.95rem;
+  color: var(--color-on-surface);
+}
+
+.countrySelectWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding-left: var(--space-3);
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.countrySelectWrapper:focus-within {
+  border-color: var(--color-border-interactive);
+}
+
+.flagIcon {
+  width: 18px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 1px;
+  display: block;
+}
+
+/* Explicitly style native option tags to prevent white-on-white native renders in desktop/mobile browsers */
+.countrySelect {
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface);
+  font-family: var(--family-mono);
+  font-size: 0.95rem;
+  padding: var(--space-3) var(--space-4) var(--space-3) 0px;
+  outline: none;
+  cursor: pointer;
+}
+
+.countrySelect option {
+  background-color: var(--color-surface-container-highest);
+  color: var(--color-on-surface);
+  font-family: var(--family-mono);
+}
