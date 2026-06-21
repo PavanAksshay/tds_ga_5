@@ -1,0 +1,552 @@
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-6);
+}
+
+.adminTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--family-mono);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.adminSubtitle {
+  font-family: var(--family-mono);
+  font-size: 11px;
+  color: var(--color-on-surface-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-2);
+}
+
+.newProjectBtn,
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.newProjectBtn:hover,
+.primaryBtn:hover { opacity: 0.85; }
+.primaryBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.ghostBtn {
+  background: transparent;
+  color: var(--color-on-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--family-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.ghostBtn:hover { color: var(--color-on-surface); border-color: var(--color-border-interactive); }
+
+/* ---------- Panels & forms ---------- */
+
+.createPanel,
+.editPanel,
+.addMilestonePanel,
+.createPanel {
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.inlineForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.input,
+.textarea,
+.select {
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--family-body);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface);
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-border-interactive);
+}
+
+.textarea { resize: vertical; font-family: var(--family-body); }
+
+.formRow {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.fieldLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 130px;
+  font-family: var(--family-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--color-on-surface-muted);
+}
+
+.select { color-scheme: dark; }
+
+.formActions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* ---------- Member picker ---------- */
+
+.memberPicker { position: relative; }
+
+.memberPickerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--family-mono);
+  font-size: 11px;
+  color: var(--color-on-surface-muted);
+  cursor: pointer;
+}
+
+.memberPickerBtn:hover { border-color: var(--color-border-interactive); color: var(--color-on-surface); }
+
+.memberChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.memberChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-surface-container-high);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 2px 8px;
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface);
+}
+
+.memberChip button {
+  display: inline-flex;
+  background: none;
+  border: none;
+  color: var(--color-on-surface-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.memberChip button:hover { color: var(--color-on-surface); }
+
+.memberDropdown {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 260px;
+  max-height: 240px;
+  overflow-y: auto;
+  background: var(--color-surface-container-high);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+}
+
+.memberOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-on-surface);
+}
+
+.memberOption:hover { background: var(--color-surface-container-highest); }
+.memberOptName { flex: 1; }
+.memberOptEmail { font-family: var(--family-mono); font-size: 10px; color: var(--color-on-surface-muted); }
+.memberEmpty { padding: var(--space-3); font-size: var(--text-sm); color: var(--color-on-surface-muted); }
+
+/* ---------- Project card ---------- */
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.emptyState {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-12);
+  text-align: center;
+  font-family: var(--family-mono);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-muted);
+}
+
+.projectCard {
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.expandToggle {
+  background: none;
+  border: none;
+  color: var(--color-on-surface-muted);
+  cursor: pointer;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+.expandToggle:hover { color: var(--color-on-surface); }
+
+.projectHeaderMain { flex: 1; min-width: 0; }
+
+.projectTitleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.projectTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.statusBadge {
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border: 1px solid;
+  border-radius: var(--radius-full);
+}
+
+.projectDesc {
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-muted);
+  margin: var(--space-2) 0 0;
+}
+
+.projectMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.metaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--family-mono);
+  font-size: 10px;
+  color: var(--color-on-surface-muted);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+}
+
+.overdue {
+  color: #ff5555;
+  border-color: #ff5555;
+}
+
+.progressTrack {
+  margin-top: var(--space-3);
+  height: 4px;
+  background: var(--color-surface-container-high);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #4ade80;
+  transition: width 0.3s ease;
+}
+
+.projectActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.statusSelect {
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-on-surface);
+  font-family: var(--family-mono);
+  font-size: 10px;
+  padding: 4px 6px;
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-on-surface-muted);
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.iconBtn:hover { color: var(--color-on-surface); border-color: var(--color-border-interactive); }
+
+.editPanel { padding: 0 var(--space-5) var(--space-5); }
+
+/* ---------- Board / columns ---------- */
+
+.projectBody {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.column {
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-on-surface-muted);
+}
+
+.columnDot { width: 7px; height: 7px; border-radius: var(--radius-full); }
+.columnCount { margin-left: auto; color: var(--color-on-surface-subtle); }
+
+.columnBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 40px;
+}
+
+.columnEmpty {
+  text-align: center;
+  color: var(--color-on-surface-subtle);
+  font-family: var(--family-mono);
+  font-size: var(--text-sm);
+  padding: var(--space-4) 0;
+}
+
+/* ---------- Milestone card ---------- */
+
+.milestoneCard {
+  background: var(--color-surface-container-high);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.milestoneTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priorityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--family-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 1px 5px;
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+}
+
+.milestoneActions { display: flex; gap: 4px; }
+
+.milestoneTitle {
+  font-family: var(--family-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.milestoneDesc {
+  font-size: 12px;
+  color: var(--color-on-surface-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.milestoneMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.moveRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+}
+
+.moveBtn {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--family-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 6px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.moveBtn:hover { border-color: var(--color-border-interactive); }
+
+/* ---------- Add milestone ---------- */
+
+.addMilestoneBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  background: transparent;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-on-surface-muted);
+  font-family: var(--family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.addMilestoneBtn:hover { color: var(--color-on-surface); border-color: var(--color-border-interactive); }
+
+.addMilestonePanel {
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .board { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .adminContainer { padding: var(--space-4); }
+  .header { flex-direction: column; align-items: stretch; gap: var(--space-4); }
+  .projectHeader { flex-wrap: wrap; }
+  .projectActions { width: 100%; justify-content: flex-end; }
+}
